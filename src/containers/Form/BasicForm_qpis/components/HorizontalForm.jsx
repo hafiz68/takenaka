@@ -225,6 +225,19 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
               </div>
             </Col>
             <Col sm={12} md={12} lg={12}>
+              <button
+                id="dropContainer1"
+                style={{ height: "298px", width: "100%" }}
+              >
+                <div>
+                  <h3>Click to translate voice notes</h3>
+                </div>
+                <div>
+                  <FaMicrophoneAlt size={100} />
+                </div>
+              </button>
+            </Col>
+            <Col sm={12} md={12} lg={12}>
               <div className="form__form-group">
                 <span className="form__form-group-label">SUB CONTRACTOR (PRODUCT):</span>
                 <div className="form__form-group-field">

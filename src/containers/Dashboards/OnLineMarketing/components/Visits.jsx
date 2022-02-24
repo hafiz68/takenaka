@@ -31,13 +31,12 @@ const Visits = () => {
   };
 
   return (
-    <Col md={12} xl={3} lg={6} xs={12}>
+    <Col md={12} xl={12} lg={12} xs={12}>
       {/* <Card>
               <CardBody className="dashboard__card-widget" color='primary'>  */}
               <Link  className='btn-issue' to="/tables/data_table_issue">
         <Button outline  color='primary'>
-        <center>
-        <h5 className='btn-issue-hdng'>Pending tasks</h5></center>
+        Pending tasks
         </Button>
 
           {/* <div className="card__title">

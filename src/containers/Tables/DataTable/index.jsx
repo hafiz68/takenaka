@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Col, Container, Row } from 'reactstrap';
+import { Button, Col, Container, Row } from 'reactstrap';
 import DataReactTable from './components/DataReactTable';
 import CreateTableData from '../CreateData';
 import { Link } from 'react-router-dom';
@@ -17,7 +17,7 @@ const DataTable = () => {
             <h3 className="page-subhead subhead">Add and check your users here
             </h3></div>
             <div className='add-btn'>
-              <Link to="/forms/basic_form" ><button style={{ height: "40px", border: '1px solid white', color: 'white', backgroundColor: '#932239', borderRadius: '10px' }}>Add User</button></Link>
+              <Link to="/forms/basic_form" ><Button >Add User</Button></Link>
               </div></div>
         </Col>
       </Row>

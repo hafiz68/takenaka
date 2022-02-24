@@ -5,7 +5,7 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import BasicTableData from './BasicTableData';
-import {AiOutlineDownload, AiFillDelete} from 'react-icons/ai'
+import {MdUnarchive} from 'react-icons/md'
 
 const { tableHeaderResponsiveData, tableRowsData } = BasicTableData();
 
@@ -38,7 +38,7 @@ const ResponsiveTable = () => {
                   <td>{item.age}</td> */}
                   <td>{item.date}</td>
                   <td>{item.location}</td>
-                  <td><button className='download-btn'  color={'light'}><AiOutlineDownload size={25}/></button><button className='download-btn' color={'light'}><AiFillDelete size={25}/></button></td>
+                  <td><button  className='unarch-btn'><MdUnarchive size={25}/></button></td>
                 </tr>
               ))}
             </tbody>

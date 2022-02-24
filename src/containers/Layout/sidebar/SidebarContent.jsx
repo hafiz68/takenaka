@@ -35,24 +35,24 @@ const SidebarContent = ({
           route="/tables/basic_tables1"
           onClick={hideSidebar}
         />
-        <SidebarLink
+        {/* <SidebarLink
           title="Report Template"
           icon="apartment"
           route="/default_pages/project_summary"
           onClick={hideSidebar}
-        />
+        /> */}
         <SidebarLink
           title="Configurator"
           icon="rocket"
           route="/ui/collapse"
           onClick={hideSidebar}
         />
-        <SidebarLink
+        {/* <SidebarLink
           title="Speak Recognition"
           icon="heart-pulse"
           route="/fitness_dashboard"
           onClick={hideSidebar}
-        />
+        /> */}
         {/* <SidebarCategory title="Layout" icon="layers" sidebarCollapse={sidebarCollapse}>
           <button className="sidebar__link" type="button" onClick={changeToLight}>
             <p className="sidebar__link-title">Light Theme</p>

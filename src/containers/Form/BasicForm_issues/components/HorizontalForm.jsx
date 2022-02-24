@@ -1,25 +1,23 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import {
-  Card, CardBody, Col, Button, ButtonToolbar,
-} from 'reactstrap';
-import { Field, reduxForm } from 'redux-form';
-import EyeIcon from 'mdi-react/EyeIcon';
-import EmailIcon from 'mdi-react/EmailIcon';
-import renderDatePickerField from '../../../../shared/components/form/DatePicker';
-import CalendarBlankIcon from 'mdi-react/CalendarBlankIcon';
-import AccountSearchIcon from 'mdi-react/AccountSearchIcon';
-import renderFileInputField from '../../../../shared/components/form/FileInput';
-import renderSelectField from '../../../../shared/components/form/Select';
-import renderDropZoneField from '../../../../shared/components/form/DropZone';
-import { FaMicrophoneAlt } from 'react-icons/fa';
-import Collapse from '../../../../shared/components/Collapse';
-import renderMultiSelectField from '../../../../shared/components/form/MultiSelect';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Card, CardBody, Col, Button, ButtonToolbar } from "reactstrap";
+import { Field, reduxForm } from "redux-form";
+import EyeIcon from "mdi-react/EyeIcon";
+import EmailIcon from "mdi-react/EmailIcon";
+import renderDatePickerField from "../../../../shared/components/form/DatePicker";
+import CalendarBlankIcon from "mdi-react/CalendarBlankIcon";
+import AccountSearchIcon from "mdi-react/AccountSearchIcon";
+import renderFileInputField from "../../../../shared/components/form/FileInput";
+import renderSelectField from "../../../../shared/components/form/Select";
+import renderDropZoneField from "../../../../shared/components/form/DropZone";
+import { FaMicrophoneAlt } from "react-icons/fa";
+import Collapse from "../../../../shared/components/Collapse";
+import renderMultiSelectField from "../../../../shared/components/form/MultiSelect";
 
 const HorizontalForm = ({ handleSubmit, reset }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
   const [isPasswordShown, setIsPasswordShown] = useState(false);
 
   const showPassword = () => {
@@ -31,7 +29,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
       <Card>
         <CardBody>
           <div className="card__title">
-            <h5 className="bold-text">{t('Add New Issue')}</h5>
+            <h5 className="bold-text">{t("Add New Issue")}</h5>
             <h5 className="subhead">Put values to add new issues</h5>
           </div>
           <form className="form form--horizontal" onSubmit={handleSubmit}>
@@ -58,29 +56,58 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 />
               </div> */}
             </div>
-            <div className="form__form-group">
-              <span className="form__form-group-label">Name</span>
-              <div className="form__form-group-field">
-                <Field
-                  name="email"
-                  component="input"
-                  type="text"
-                  placeholder="Name"
-                />
+            <Col sm={12} md={6} lg={6}>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Branch Name</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Branch Name"
+                    component="input"
+                    type="text"
+                    placeholder="Branch Name"
+                  />
+                </div>
               </div>
-            </div>
-
-            <div className="form__form-group">
-              <span className="form__form-group-label">Description</span>
-              <div className="form__form-group-field">
-                <Field
-                  name="description"
-                  component="input"
-                  type="descrption"
-                  placeholder="descrption"
-                />
+            </Col>
+            <Col sm={12} md={6} lg={6}>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Client</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Client"
+                    component="input"
+                    type="text"
+                    placeholder="Client"
+                  />
+                </div>
               </div>
-            </div>
+            </Col>
+            <Col sm={12} md={6} lg={6}>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Project Name</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Project Name"
+                    component="input"
+                    type="text"
+                    placeholder="Project Name"
+                  />
+                </div>
+              </div>
+            </Col>
+            <Col sm={12} md={6} lg={6}>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Occurance</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Occurance"
+                    component="input"
+                    type="text"
+                    placeholder="Occurance"
+                  />
+                </div>
+              </div>
+            </Col>
             <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
                 <span className="form__form-group-label">Due date</span>
@@ -95,33 +122,107 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                     <CalendarBlankIcon />
                   </div>
                 </div>
-              </div></Col>
+              </div>
+            </Col>
+            <Col sm={12} md={6} lg={6}>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Description</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="description"
+                    component="input"
+                    type="descrption"
+                    placeholder="descrption"
+                  />
+                </div>
+              </div>
+            </Col>
+            <Col sm={12} md={6} lg={6}>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Disturbance</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Disturbance"
+                    component="input"
+                    type="text"
+                    placeholder="Disturbance"
+                  />
+                </div>
+              </div>
+            </Col>
+            <Col sm={12} md={6} lg={6}>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Position</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Position"
+                    component={renderSelectField}
+                    options={[
+                      { value: "one", label: "Walls" },
+                      { value: "two", label: "Ceiling" },
+                    ]}
+                  />
+                </div>
+              </div>
+            </Col>
+            <Col sm={12} md={6} lg={6}>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Phenomenon</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Phenomenon"
+                    component={renderSelectField}
+                    options={[
+                      { value: "Cracks", label: "Cracks" },
+                      { value: "Vibbrations", label: "Vibrations" },
+                    ]}
+                  />
+                </div>
+              </div>
+            </Col>
             <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
                 <span className="form__form-group-label">Status</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="select"
+                    name="Status"
                     component={renderSelectField}
                     options={[
-                      { value: 'one', label: 'Completed' },
-                      { value: 'two', label: 'Ongoing' },
+                      { value: "one", label: "Completed" },
+                      { value: "two", label: "Ongoing" },
                     ]}
                   />
                 </div>
-              </div></Col>
+              </div>
+            </Col>
             <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
-                <span className="form__form-group-label">Assigned</span>
+                <span className="form__form-group-label">
+                  Resposible person
+                </span>
                 <div className="form__form-group-field">
                   <Field
-                    name="Assigned"
+                    name="Resposible person"
                     component="input"
                     type="text"
-                    placeholder="assigned"
+                    placeholder="Resposible person"
                   />
                 </div>
-              </div></Col>
+              </div>
+            </Col>
+            <Col sm={12} md={6} lg={6}>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Assign</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Assign"
+                    component="input"
+                    type="text"
+                    placeholder="Assign"
+                  />
+                </div>
+              </div>
+            </Col>
             <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
                 <span className="form__form-group-label">Cc</span>
@@ -133,7 +234,24 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                     placeholder="Cc"
                   />
                 </div>
-              </div></Col>
+              </div>
+            </Col>
+            <Col sm={12} md={6} lg={6}>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Level</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Level"
+                    component={renderSelectField}
+                    options={[
+                      { value: "1", label: "1" },
+                      { value: "2", label: "2" },
+                      { value: "3", label: "3" },
+                    ]}
+                  />
+                </div>
+              </div>
+            </Col>
             {/* <div className="form__form-group">
               <span className="form__form-group-label">Icon Left</span>
               <div className="form__form-group-field">
@@ -221,61 +339,59 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 />
               </div>
             </div> */}
-            <ButtonToolbar className="form__button-toolbar">
+            {/* <ButtonToolbar className="form__button-toolbar">
               <Button color="primary" type="submit">Add Issue</Button>
               <Button type="button" onClick={reset}>
                 Cancel
               </Button>
-            </ButtonToolbar>
-          </form>
-          <div className="card__title">
-            <h5 className="bold-text">{t('Add attachments')}</h5>
-            {/* <h5 className="subhead">Put values to add new issues</h5> */}
-          </div>
-          <form className="form form--horizontal" onSubmit={handleSubmit}>
-            <Col sm={12} md={6} lg={6}>
-          <form className="form" onSubmit={handleSubmit}>
-            <Field
-              name="files"
-              component={renderDropZoneField}
-              customHeight
-            />
-            <ButtonToolbar className="form__button-toolbar">
-              <Button color="primary" type="submit">Submit</Button>
-              <Button type="button" onClick={reset}>
-                Cancel
-              </Button>
-            </ButtonToolbar>
-          </form>
+            </ButtonToolbar> */}
+            {/* </form> */}
+            <Col sm={12} md={12} lg={12}>
+              <div className="card__title">
+                <h5 className="bold-text">{t("Add attachments")}</h5>
+              </div>
             </Col>
             <Col sm={12} md={6} lg={6}>
-              <button id="dropContainer1" style={{ height: '298px', width: '100%' }}>
-              <FaMicrophoneAlt size={100} />
-            </button>
+              <Field
+                name="files"
+                component={renderDropZoneField}
+                customHeight
+              />
               <ButtonToolbar className="form__button-toolbar">
-                <Button color="primary" type="submit">Record</Button>
-                <Button type="reset" >
+                <Button color="primary" type="submit">
+                  Submit
+                </Button>
+                <Button type="button" onClick={reset}>
                   Cancel
                 </Button>
-              </ButtonToolbar></Col>
-          </form>
-          <div className="card__title">
-            <h5 className="bold-text">{t('Add Forms')}</h5>
-            {/* <h5 className="subhead">Put values to add new issues</h5> */}
-          </div>
-
-          <form className="form form--horizontal" onSubmit={handleSubmit}>
-          <Col sm={12} md={12} lg={12}>
-          <Collapse title="Add Forms" className="with-shadow">
-            <div className='btn-clm'>
-           <button className="butn__link" type="button" ><Link to='/forms/simple_form'>
-                <p className="butn__link-title">Simple Form</p></Link>
+              </ButtonToolbar>
+              {/* </form> */}
+            </Col>
+            <Col sm={12} md={6} lg={6}>
+              <button
+                id="dropContainer1"
+                style={{ height: "298px", width: "100%" }}
+              >
+                <div>
+                  <h3>Click to download voice notes</h3>
+                </div>
+                <div>
+                  <FaMicrophoneAlt size={100} />
+                </div>
               </button>
-              <button className="butn__link" type="button" ><Link to='/forms/qpis_form'>
-                <p className="butn__link-title">QPIS Form</p></Link>
-              </button></div>
-          </Collapse></Col>
-
+            </Col>
+            <div className="card__title">
+              <h5 className="bold-text">{t("Add Forms")}</h5>
+            </div>
+            <Col sm={12} md={12} lg={12}>
+              <div className="btn-clm">
+                <button className="butn__link" type="button">
+                  <Link to="/forms/qpis_form">
+                    <p className="butn__link-title">QPIS Form</p>
+                  </Link>
+                </button>
+              </div>
+            </Col>
           </form>
         </CardBody>
       </Card>
@@ -289,5 +405,5 @@ HorizontalForm.propTypes = {
 };
 
 export default reduxForm({
-  form: 'horizontal_form', // a unique identifier for this form
+  form: "horizontal_form", // a unique identifier for this form
 })(HorizontalForm);

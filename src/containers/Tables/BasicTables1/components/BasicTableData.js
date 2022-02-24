@@ -18,7 +18,7 @@ const BasicTableData = () => {
     // { id: 5, title: 'Age' },
     { id: 7, title: 'Date' },
     { id: 8, title: 'Location' },
-    { id: 9, title: 'Actions' },
+    { id: 9, title: 'Unarchive' },
 
   ];
 

@@ -185,7 +185,7 @@ const BoxedCollapseFullWidth = ({
               </Col>
             </Row>
           </Collapse>
-          <Collapse title="Voice notes" className="with-shadow">
+          {/* <Collapse title="Voice notes" className="with-shadow">
             <div className='btn-clm'>
               <button className="butn__link" type="button" onClick={changeToLight}>
                 <p className="butn__link-title">English</p>
@@ -196,7 +196,7 @@ const BoxedCollapseFullWidth = ({
               <button className="butn__link" type="button" onClick={changeToDark}>
                 <p className="butn__link-title">German</p>
               </button></div>
-          </Collapse>
+          </Collapse> */}
         </CardBody>
       </Card>
     </Col>

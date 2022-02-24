@@ -4,7 +4,7 @@ import CodeHighlither from '../../../../shared/components/CodeHighlither';
 
 const Notifications = () => (
   <Card className="card--not-full-height">
-    <CardBody>
+    {/* <CardBody>
       <div className="card__title">
         <h5 className="bold-text">Notifications</h5>
       </div>
@@ -44,7 +44,7 @@ export default BasicNotifications;
 `}
       </CodeHighlither>
       <p>Stylesheet: <b>template/src/scss/components/notification.scss</b></p>
-    </CardBody>
+    </CardBody> */}
   </Card>
 );
 

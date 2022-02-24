@@ -30,59 +30,59 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
       <Card>
         <CardBody>
           <div className="card__title">
-            <h5 className="bold-text">{t('Add New Issue')}</h5>
-            <h5 className="subhead">Put values to add new issues</h5>
+            <h5 className="bold-text">{t('Add New Project')}</h5>
+            <h5 className="subhead">Put values to add new projects</h5>
           </div>
           <form className="form form--horizontal" onSubmit={handleSubmit}>
           <Col sm={12} md={6} lg={6}>
             <div className="form__form-group">
-              <span className="form__form-group-label">Branch</span>
+              <span className="form__form-group-label">Project name</span>
               <div className="form__form-group-field">
                 <Field
-                  name="email"
+                  name="Project name"
                   component="input"
                   type="text"
-                  placeholder="Branch"
+                  placeholder="Project name"
                 />
               </div>
             </div></Col>
             <Col sm={12} md={6} lg={6}>
             <div className="form__form-group">
-              <span className="form__form-group-label">Client</span>
+              <span className="form__form-group-label">Project type</span>
               <div className="form__form-group-field">
                 <Field
-                  name="description"
+                  name="Project type"
                   component="input"
-                  type="descrption"
-                  placeholder="Client"
+                  type="text"
+                  placeholder="Project type"
                 />
               </div>
             </div></Col>
             <Col sm={12} md={6} lg={6}>
             <div className="form__form-group">
-              <span className="form__form-group-label">Project/ Building Name</span>
+              <span className="form__form-group-label">Project manager</span>
               <div className="form__form-group-field">
                 <Field
-                  name="description"
+                  name="Project manager"
                   component="input"
-                  type="descrption"
-                  placeholder="Project/ Building Name"
+                  type="text"
+                  placeholder="Project manager"
                 />
               </div>
             </div></Col>
             <Col sm={12} md={6} lg={6}>
             <div className="form__form-group">
-              <span className="form__form-group-label">Occurrence</span>
+              <span className="form__form-group-label">Architect</span>
               <div className="form__form-group-field">
                 <Field
-                  name="description"
+                  name="Architect"
                   component="input"
-                  type="descrption"
-                  placeholder="Occurrence"
+                  type="text"
+                  placeholder="Architect"
                 />
               </div>
             </div></Col>
-            <Col sm={12} md={6} lg={6}>
+            {/* <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
                 <span className="form__form-group-label">Position</span>
                 <div className="form__form-group-field">
@@ -123,20 +123,20 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                     ]}
                   />
                 </div>
-              </div></Col>
+              </div></Col> */}
             <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
-                <span className="form__form-group-label">Responsibility</span>
+                <span className="form__form-group-label">Site manager</span>
                 <div className="form__form-group-field">
                   <Field
                     name="Responsibility"
                     component="input"
                     type="text"
-                    placeholder="Responsibility"
+                    placeholder="Site manager"
                   />
                 </div>
               </div></Col>
-              <Col sm={12} md={6} lg={6}>
+              {/* <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
                 <span className="form__form-group-label">Status</span>
                 <div className="form__form-group-field">
@@ -164,8 +164,8 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                     ]}
                   />
                 </div>
-              </div></Col>
-              <Col sm={12} md={12} lg={12}>
+              </div></Col> */}
+              {/* <Col sm={12} md={12} lg={12}>
           <form className="form" onSubmit={handleSubmit}>
             <Field
               name="files"
@@ -173,14 +173,14 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
               customHeight
             />
           </form>
-            </Col>
-
+            </Col> */}
+            <Col sm={12} md={12} lg={12}>
             <ButtonToolbar className="form__button-toolbar">
               <Button color="primary" type="submit">Submit</Button>
               <Button type="button" onClick={reset}>
                 Cancel
               </Button>
-            </ButtonToolbar>
+            </ButtonToolbar></Col>
           </form>
         </CardBody>
       </Card>

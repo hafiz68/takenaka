@@ -6,6 +6,7 @@ import {
    DropdownMenu, DropdownItem
 } from 'reactstrap';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
+import {GoDesktopDownload} from 'react-icons/go';
 import { Field, reduxForm } from 'redux-form';
 import renderSelectField from '../../../../shared/components/form/Select';
 import { Link } from 'react-router-dom';
@@ -127,9 +128,11 @@ const DataReactTable = ({ reactTableData }) => {
                 <th >Issue #</th>
                 <th >Project Name</th>
                 <th >Issue Title</th>
+                <th >Level</th>
                 <th >Date Created</th>
                 <th >Status</th>
                 <th >Change Status</th>
+                <th >Download QPIS</th>
               </tr>
             </thead>
             <tbody>
@@ -137,11 +140,9 @@ const DataReactTable = ({ reactTableData }) => {
                 <td>1</td>
                 <td>Cracks</td>
                 <td>Ceiling cracks</td>
+                <td><Badge color={"primary"}>3</Badge></td>
                 <td>18/3/2022</td>
-                <td>
-                  
-                    <Badge color={"primary"}>Ongoing</Badge>
-                </td>
+                <td><Badge color={"primary"}>Ongoing</Badge></td>
                 <td>
                   <ButtonToolbar>
                     <UncontrolledDropdown>
@@ -174,6 +175,7 @@ const DataReactTable = ({ reactTableData }) => {
                 <td>2</td>
                 <td>Cracks</td>
                 <td>Ceiling cracks</td>
+                <td><Badge color={"danger"}>1</Badge></td>
                 <td>18/3/2022</td>
                 <td><Badge color={"success"}>approved</Badge></td>
                 <td>
@@ -190,13 +192,15 @@ const DataReactTable = ({ reactTableData }) => {
                     </UncontrolledDropdown>
                   </ButtonToolbar>
                 </td>
+                <td><Button><p><GoDesktopDownload size={30}/></p></Button></td>
               </tr>
               <tr>
                 <td>3</td>
                 <td>Cracks</td>
                 <td>Ceiling cracks</td>
+                <td><Badge color={"success"}>2</Badge></td>
                 <td>18/3/2022</td>
-                <td><Badge color={"danger"}>approved</Badge></td>
+                <td><Badge color={"danger"}>completed</Badge></td>
                 <td>
                   <ButtonToolbar>
                     <UncontrolledDropdown>

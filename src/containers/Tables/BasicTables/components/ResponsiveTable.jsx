@@ -16,9 +16,10 @@ const ResponsiveTable = () => {
       <Card>
         <CardBody>
           <div className="card__title">
-            <h5 className="bold-text">{t('tables.basic_tables.responsive_table')}</h5>
-            <h5 className="subhead">Use default table with property <span className="red-text">responsive</span></h5>
-          </div>
+            {/* <h5 className="bold-text">{t('tables.basic_tables.responsive_table')}</h5>
+            <h5 className="subhead">Use default table with property <span className="red-text">responsive</span></h5> */}
+            <Link to='/forms/simple_form'><Button type='warning' >Add new project</Button></Link>
+                  </div>
           <Table responsive className="table--bordered">
             <thead>
               <tr>
