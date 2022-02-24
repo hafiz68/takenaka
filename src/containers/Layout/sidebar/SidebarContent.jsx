@@ -16,7 +16,7 @@ const SidebarContent = ({
         <SidebarLink
           title="Dash Board"
           icon="home"
-          route="/online_marketing_dashboard"
+          route="/main_dashboard"
           onClick={hideSidebar}
         />
           <SidebarLink title="User Management" route="/tables/data_table"   icon="user" onClick={hideSidebar} />

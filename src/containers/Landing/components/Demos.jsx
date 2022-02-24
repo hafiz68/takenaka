@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Col, Row, Container } from 'reactstrap';
 import { ThemeProps } from '../../../shared/prop-types/ReducerProps';
 
-const onlineMarketing = `${process.env.PUBLIC_URL}/img/landing/demos/online_marketing_light.png`;
+const onlineMarketing = `${process.env.PUBLIC_URL}/img/landing/demos/main_light.png`;
 const eCommerce = `${process.env.PUBLIC_URL}/img/landing/demos/e_commerce_light.png`;
 const app = `${process.env.PUBLIC_URL}/img/landing/demos/app_light.png`;
 const booking = `${process.env.PUBLIC_URL}/img/landing/demos/booking_light.png`;
@@ -59,7 +59,7 @@ const Demos = ({ theme, changeToLight, changeToDark }) => (
       </Row>
       <Row className="landing__demo-wrap">
         <Col lg={8}>
-          <Link className="landing__demo" target="_blank" to="/online_marketing_dashboard">
+          <Link className="landing__demo" target="_blank" to="/main_dashboard">
             <div className="landing__demo-img-wrap">
               <img src={theme.className === 'theme-dark' ? onlineMarketingDark : onlineMarketing} alt="" />
             </div>

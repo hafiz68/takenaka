@@ -21,7 +21,7 @@ export default [
         userName: 'littleOrc',
         message: 'Sales statistic.png',
         file: {
-          preview: `${process.env.PUBLIC_URL}/img/landing/demos/online_marketing_light.png`,
+          preview: `${process.env.PUBLIC_URL}/img/landing/demos/main_light.png`,
           size: '(2,1 Mb)',
         },
         date: new Date(2018, 3, 7, 10, 22, 0, 0),

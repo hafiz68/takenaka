@@ -11,7 +11,7 @@ const AuthGoogleBtn = ({ dispatch, history }) => {
   const responseSuccess = (response) => {
     dispatch(auth({ name: response.profileObj.name, avatar: response.profileObj.imageUrl }));
     localStorage.setItem('easydev', response.accessToken);
-    history.push('/online_marketing_dashboard');
+    history.push('/main_dashboard');
   };
 
   const responseError = (response) => {
