@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import { Alert, Button } from 'reactstrap';
 import renderCheckBoxField from '../form/CheckBox';
 
-const LogInForm = ({
+const OtpForm = ({
   handleSubmit, errorMessage, errorMsg, fieldUser, typeFieldUser, form,
 }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -26,8 +26,7 @@ const LogInForm = ({
         {errorMessage}
         {errorMsg}
       </Alert>
-      <div className="form__form-group">
-        <span className="form__form-group-label">{fieldUser}</span>
+      {/* <div className="form__form-group">
         <div className="form__form-group-field">
           <div className="form__form-group-icon">
             <AccountOutlineIcon />
@@ -40,32 +39,31 @@ const LogInForm = ({
             className="input-without-border-radius"
           />
         </div>
-      </div>
+      </div> */}
       <div className="form__form-group">
-        <span className="form__form-group-label">Password</span>
         <div className="form__form-group-field">
           <div className="form__form-group-icon">
-            <KeyVariantIcon />
+            
           </div>
           <Field
             name="password"
             component="input"
             type={showPassword ? 'text' : 'password'}
-            placeholder="Password"
+            placeholder="OTP"
             className="input-without-border-radius"
           />
           <button
             type="button"
             className={`form__form-group-button${showPassword ? ' active' : ''}`}
             onClick={showPasswordToggle}
-          ><EyeIcon />
+          >
           </button>
           <div className="account__forgot-password">
-            <NavLink to="/reset_password">Forgot a password?</NavLink>
+            <NavLink to="/reset_password">Resend OTP</NavLink>
           </div>
         </div>
       </div>
-      <div className="form__form-group">
+      {/* <div className="form__form-group">
         <div className="form__form-group form__form-group-field">
           <Field
             name={`remember_me-${form}`}
@@ -73,14 +71,14 @@ const LogInForm = ({
             label="Remember me"
           />
         </div>
-      </div>
-      <div className="account__btns">
+      </div> */}
+      <div className="account__btns" id='otp-btn'>
         {
           form === 'modal_login'
-            ? <Button className="account__btn" type="submit" color="primary">Sign In</Button>
+            ? <Button className="account__btn" type="submit" color="primary">Verify</Button>
             : (
-              <NavLink className="account__btn btn btn-primary" to="/otp">
-                Sign In
+              <NavLink className="account__btn btn btn-primary" to="/main_dashboard">
+                Verify
               </NavLink>
             )
         }
@@ -93,7 +91,7 @@ const LogInForm = ({
   );
 };
 
-LogInForm.propTypes = {
+OtpForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   errorMessage: PropTypes.string,
   errorMsg: PropTypes.string,
@@ -102,7 +100,7 @@ LogInForm.propTypes = {
   form: PropTypes.string.isRequired,
 };
 
-LogInForm.defaultProps = {
+OtpForm.defaultProps = {
   errorMessage: '',
   errorMsg: '',
   fieldUser: 'Username',
@@ -111,4 +109,4 @@ LogInForm.defaultProps = {
 
 export default connect(state => ({
   errorMsg: state.user.error,
-}))(reduxForm()(LogInForm));
+}))(reduxForm()(OtpForm));

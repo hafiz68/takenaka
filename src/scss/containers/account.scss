@@ -152,6 +152,7 @@
   font-size: 11px;
   line-height: 15px;
   bottom: -18px;
+  
 
   @include directify($directions) {
     #{directed('right')}: 0px;
@@ -320,4 +321,8 @@
   .account__btns {
     flex-wrap: wrap;
   }
+}
+
+#otp-btn{
+  margin-top: 15px;
 }
