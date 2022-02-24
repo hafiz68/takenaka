@@ -56,7 +56,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
               <span className="form__form-group-label">Name</span>
               <div className="form__form-group-field">
                 <Field
-                  name="email"
+                  name="Name"
                   component="input"
                   type="text"
                   placeholder="Name"
@@ -95,7 +95,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
               <span className="form__form-group-label">Role</span>
               <div className="form__form-group-field">
                 <Field
-                  name="email"
+                  name="Role"
                   component="input"
                   type="text"
                   placeholder="Role"
@@ -106,7 +106,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
               <span className="form__form-group-label">Branch</span>
               <div className="form__form-group-field">
                 <Field
-                  name="email"
+                  name="Branch"
                   component="input"
                   type="text"
                   placeholder="Branch"

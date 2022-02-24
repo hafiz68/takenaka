@@ -56,7 +56,7 @@ const ProfileSettings = ({ handleSubmit, reset }) => (
         type="email"
       />
     </div>
-    <div>
+    {/* <div>
       <span className="material-form__label">URL</span>
       <Field
         name="url"
@@ -74,7 +74,7 @@ const ProfileSettings = ({ handleSubmit, reset }) => (
         multiline
         rowsMax="4"
       />
-    </div>
+    </div> */}
     <ButtonToolbar className="form__button-toolbar">
       <Button color="primary" type="submit">Update profile</Button>
       <Button type="button" onClick={reset}>

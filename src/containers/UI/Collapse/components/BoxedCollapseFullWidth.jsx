@@ -36,7 +36,7 @@ const BoxedCollapseFullWidth = ({
                 <Table responsive hover>
                   <thead>
                     <tr>
-                      <th>Id</th>
+                      <th>Sr#</th>
                       <th>User Name</th>
                       <th>Checkbox</th>
                     </tr>
@@ -76,8 +76,8 @@ const BoxedCollapseFullWidth = ({
                 <p><Table responsive hover>
                   <thead>
                     <tr>
-                      <th>Id</th>
-                      <th>User Name</th>
+                      <th>Sr#</th>
+                      <th>User Id</th>
                       <th>Checkbox</th>
                     </tr>
                   </thead>
@@ -85,27 +85,27 @@ const BoxedCollapseFullWidth = ({
 
                     <tr >
                       <td>1</td>
-                      <td>John23</td>
+                      <td>Tk0001</td>
                       <td><input type='radio'></input></td>
                     </tr>
                     <tr >
-                      <td>1</td>
-                      <td>John23</td>
+                      <td>2</td>
+                      <td>TK0002</td>
                       <td><input type='radio'></input></td>
                     </tr>
                     <tr >
-                      <td>1</td>
-                      <td>John23</td>
+                      <td>3</td>
+                      <td>TK0003</td>
                       <td><input type='radio'></input></td>
                     </tr>
                     <tr >
-                      <td>1</td>
-                      <td>John23</td>
+                      <td>4</td>
+                      <td>TK0004</td>
                       <td><input type='radio'></input></td>
                     </tr>
                     <tr >
-                      <td>1</td>
-                      <td>John23</td>
+                      <td>5</td>
+                      <td>TK0005</td>
                       <td><input type='radio'></input></td>
                     </tr>
 

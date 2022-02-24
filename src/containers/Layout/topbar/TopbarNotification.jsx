@@ -43,7 +43,7 @@ const TopbarNotification = () => {
 
   return (
     <div className="topbar__collapse">
-      <button className="topbar__btn" type="button" onClick={toggleNotification}>
+      {/* <button className="topbar__btn" type="button" onClick={toggleNotification}>
         <NotificationsIcon />
       </button>
       {isCollapsed && <button className="topbar__back" type="button" onClick={toggleNotification} />}
@@ -70,7 +70,7 @@ const TopbarNotification = () => {
         <Link className="topbar__collapse-link" to="/main_dashboard" onClick={toggleNotification}>
           See all notifications
         </Link>
-      </Collapse>
+      </Collapse> */}
     </div>
   );
 };

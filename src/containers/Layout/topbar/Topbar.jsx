@@ -18,7 +18,7 @@ const Topbar = ({
         changeMobileSidebarVisibility={changeMobileSidebarVisibility}
         changeSidebarVisibility={changeSidebarVisibility}
       />
-      <Link className="topbar__logo" to="/login" />
+      <Link className="topbar__logo" to="/main_dashboard" />
     </div>
     <div className="topbar__right">
       <div className="topbar__right-search">

@@ -39,7 +39,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 <span className="form__form-group-label">Branch</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="email"
+                    name="Branch"
                     component="input"
                     type="text"
                     placeholder="Branch"
@@ -51,7 +51,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 <span className="form__form-group-label">Client</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="description"
+                    name="Client"
                     component="input"
                     type="descrption"
                     placeholder="Client"
@@ -163,7 +163,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 <span className="form__form-group-label">Head line:</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="Cc"
+                    name="Head line"
                     component="input"
                     type="text"
                     placeholder="Head line:"
@@ -175,7 +175,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 <span className="form__form-group-label">Project Code:</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="Cc"
+                    name="Project Code"
                     component="input"
                     type="text"
                     placeholder="Project Code:"
@@ -187,7 +187,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 <span className="form__form-group-label">Designed by:</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="Cc"
+                    name="Designed by"
                     component="input"
                     type="text"
                     placeholder="Designed by:"
@@ -216,7 +216,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 <span className="form__form-group-label"><h5>WHY</h5></span>
                 <div className="form__form-group-field">
                   <Field
-                    name="Cc"
+                    name="WHY"
                     component="input"
                     type="text"
                     placeholder=""
@@ -293,7 +293,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 <span className="form__form-group-label">DATE OCCUR:</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="default_date"
+                    name="DATE OCCUR"
                     component={renderDatePickerField}
                     type="text"
                     placeholder="yyyy/mm/dd"
@@ -334,7 +334,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 <span className="form__form-group-label">DATE OF ISSUE BEY</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="default_date"
+                    name="DATE OF ISSUE"
                     component={renderDatePickerField}
                     type="text"
                     placeholder="yyyy/mm/dd"
@@ -361,7 +361,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 <span className="form__form-group-label">YEAR OF COMPLETION</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="Cc"
+                    name="YEAR OF COMPLETION"
                     component="input"
                     type="text"
                     placeholder="Head line:"
@@ -463,7 +463,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
             <Col sm={12} md={12} lg={12}>
               <form className="form" onSubmit={handleSubmit}>
                 <Field
-                  name="files"
+                  name="files1"
                   component={renderDropZoneField}
                   customHeight
                 />
