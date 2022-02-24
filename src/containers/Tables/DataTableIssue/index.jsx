@@ -27,7 +27,7 @@ const DataTable = () => {
               </h3>
             </div>
             <div className="add-btn">
-              <Link to="/forms/basic_formissue">
+              <Link to="/forms/usersissue">
                 <Button>Add Issue</Button>
               </Link>
             </div>

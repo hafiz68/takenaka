@@ -18,10 +18,10 @@ import WizardForm from '../../../Form/WizardForm/index';
 
 export default () => (
   <Switch>
-    <Route path="/forms/basic_form" component={BasicFormIssue} />
-    <Route path="/forms/basic_form_Issue" component={BasicForm} />
-    <Route path="/forms/basic_formissue" component={BasicForm_Issue} />
-    <Route path="/forms/simple_form" component={Simple_form} />
+    <Route path="/forms/users" component={BasicFormIssue} />
+    <Route path="/forms/users_Issue" component={BasicForm} />
+    <Route path="/forms/usersissue" component={BasicForm_Issue} />
+    <Route path="/forms/add_project" component={Simple_form} />
     <Route path="/forms/qpis_form" component={QpisForm} />
     <Route path="/forms/check_form_controls" component={CheckFormControls} />
     <Route path="/forms/file_upload" component={FileUpload} />

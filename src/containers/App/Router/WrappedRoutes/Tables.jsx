@@ -11,11 +11,11 @@ import MaterialTable from '../../../Tables/MaterialTable/index';
 
 export default () => (
   <Switch>
-    <Route path="/tables/basic_tables" component={BasicTables} />
-    <Route path="/tables/basic_tables1" component={BasicTables1} />
-    <Route path="/tables/data_table" component={DataTable} />
-    <Route path="/tables/data_table_issue" component={DataTableIssue} />
-    <Route path="/tables/dnd_table" component={DragAndDropTable} />
+    <Route path="/tables/projects" component={BasicTables} />
+    <Route path="/tables/archives" component={BasicTables1} />
+    <Route path="/tables/users" component={DataTable} />
+    <Route path="/tables/users_issue" component={DataTableIssue} />
+    <Route path="/tables/roles" component={DragAndDropTable} />
     <Route path="/tables/editable_table" component={EditableTable} />
     <Route path="/tables/resizable_table" component={ResizableTable} />
     <Route path="/tables/material_table" component={MaterialTable} />

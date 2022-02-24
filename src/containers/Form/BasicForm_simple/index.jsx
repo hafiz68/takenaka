@@ -12,7 +12,7 @@ const BasicForm = () => {
     <Container>
       <Row>
         <Col md={12}>
-          <h3 className="page-title">{t('Issues')}</h3>
+          <h3 className="page-title">{t('Projects')}</h3>
           {/* <h3 className="page-subhead subhead">Add information to add User
           </h3> */}
         </Col>

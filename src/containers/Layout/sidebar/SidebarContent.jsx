@@ -19,20 +19,20 @@ const SidebarContent = ({
           route="/main_dashboard"
           onClick={hideSidebar}
         />
-          <SidebarLink title="User Management" route="/tables/data_table"   icon="user" onClick={hideSidebar} />
+          <SidebarLink title="User Management" route="/tables/users"   icon="user" onClick={hideSidebar} />
         <SidebarLink
           title="Role Management"
           icon="store"
-          route="/tables/dnd_table"
+          route="/tables/roles"
           onClick={hideSidebar}
           icon="apartment"
-          /> <SidebarLink title="Project Management"  icon="apartment" route="/tables/basic_tables" onClick={hideSidebar} />
-          <SidebarLink title="Issues"  icon="apartment" route="/tables/data_table_issue" onClick={hideSidebar} />
-        <SidebarLink title="Log files"  icon="heart-pulse" route="/charts/recharts" onClick={hideSidebar} />
+          /> <SidebarLink title="Project Management"  icon="apartment" route="/tables/projects" onClick={hideSidebar} />
+          <SidebarLink title="Issues"  icon="apartment" route="/tables/users_issue" onClick={hideSidebar} />
+        <SidebarLink title="Log files"  icon="heart-pulse" route="/charts/log_files" onClick={hideSidebar} />
         <SidebarLink
           title="Archive data"
           icon="smartphone"
-          route="/tables/basic_tables1"
+          route="/tables/archives"
           onClick={hideSidebar}
         />
         {/* <SidebarLink
@@ -44,7 +44,7 @@ const SidebarContent = ({
         <SidebarLink
           title="Configurator"
           icon="rocket"
-          route="/ui/collapse"
+          route="/ui/configs"
           onClick={hideSidebar}
         />
         {/* <SidebarLink
@@ -73,7 +73,7 @@ const SidebarContent = ({
           <SidebarLink title="Alerts" route="/ui/alerts" onClick={hideSidebar} />
           <SidebarLink title="Buttons" route="/ui/buttons" onClick={hideSidebar} />
           <SidebarLink title="Carousel" route="/ui/carousel" onClick={hideSidebar} />
-          <SidebarLink title="Collapse" route="/ui/collapse" onClick={hideSidebar} />
+          <SidebarLink title="Collapse" route="/ui/configs" onClick={hideSidebar} />
           <SidebarLink title="Grids" route="/ui/grids" onClick={hideSidebar} />
           <SidebarLink title="Modals" route="/ui/modals" onClick={hideSidebar} />
           <SidebarLink title="Notifications" route="/ui/notifications" onClick={hideSidebar} />
@@ -89,7 +89,7 @@ const SidebarContent = ({
         <SidebarLink title="Chat Application" icon="bubble" route="/chat" onClick={hideSidebar} />
         <SidebarLink title="Todo Application" newLink icon="book" route="/todo" onClick={hideSidebar} />
         <SidebarCategory title="Forms" icon="file-add" sidebarCollapse={sidebarCollapse}>
-          <SidebarLink title="Basic Form" route="/forms/basic_form" onClick={hideSidebar} />
+          <SidebarLink title="Basic Form" route="/forms/users" onClick={hideSidebar} />
           <SidebarLink title="Check Form Controls" route="/forms/check_form_controls" onClick={hideSidebar} />
           <SidebarLink title="File Upload" route="/forms/file_upload" onClick={hideSidebar} />
           <SidebarLink title="Floating Labels Form" route="/forms/floating_labels_form" onClick={hideSidebar} />
@@ -102,9 +102,9 @@ const SidebarContent = ({
           <SidebarLink title="Wizard Form" route="/forms/wizard_form" onClick={hideSidebar} />
         </SidebarCategory>
         <SidebarCategory title="Tables" icon="list" isNew sidebarCollapse={sidebarCollapse}>
-          <SidebarLink title="Basic tables" route="/tables/basic_tables" onClick={hideSidebar} />
-          <SidebarLink title="Data table" newLink route="/tables/data_table" onClick={hideSidebar} />
-          <SidebarLink title="Drag & Drop table" newLink route="/tables/dnd_table" onClick={hideSidebar} />
+          <SidebarLink title="Basic tables" route="/tables/projects" onClick={hideSidebar} />
+          <SidebarLink title="Data table" newLink route="/tables/users" onClick={hideSidebar} />
+          <SidebarLink title="Drag & Drop table" newLink route="/tables/roles" onClick={hideSidebar} />
           <SidebarLink title="Editable table" route="/tables/editable_table" onClick={hideSidebar} />
           <SidebarLink title="Material table" route="/tables/material_table" onClick={hideSidebar} />
           <SidebarLink
@@ -117,7 +117,7 @@ const SidebarContent = ({
         <SidebarCategory title="Charts" icon="chart-bars" sidebarCollapse={sidebarCollapse}>
           <SidebarLink title="ChartsJS" route="/charts/charts_js" onClick={hideSidebar} />
           <SidebarLink title="React-vis" route="/charts/react_vis" onClick={hideSidebar} />
-          <SidebarLink title="Recharts" route="/charts/recharts" onClick={hideSidebar} />
+          <SidebarLink title="Recharts" route="/charts/log_files" onClick={hideSidebar} />
         </SidebarCategory>
         <SidebarCategory title="Maps" icon="map" isNew sidebarCollapse={sidebarCollapse}>
           <SidebarLink title="Google map" route="/maps/google_map" onClick={hideSidebar} />

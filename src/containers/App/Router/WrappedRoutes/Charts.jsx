@@ -8,6 +8,6 @@ export default () => (
   <Switch>
     <Route path="/charts/charts_js" component={ChartsJS} />
     <Route path="/charts/react_vis" component={ReactVis} />
-    <Route path="/charts/recharts" component={Recharts} />
+    <Route path="/charts/log_files" component={Recharts} />
   </Switch>
 );

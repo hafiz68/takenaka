@@ -17,7 +17,7 @@ const DataTable = () => {
             <h3 className="page-subhead subhead">Add and check your users here
             </h3></div>
             <div className='add-btn'>
-              <Link to="/forms/basic_form" ><Button >Add User</Button></Link>
+              <Link to="/forms/users" ><Button >Add User</Button></Link>
               </div></div>
         </Col>
       </Row>

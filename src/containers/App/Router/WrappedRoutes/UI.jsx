@@ -20,7 +20,7 @@ export default () => (
     <Route path="/ui/alerts" component={Alerts} />
     <Route path="/ui/buttons" component={Buttons} />
     <Route path="/ui/carousel" component={Carousel} />
-    <Route path="/ui/collapse" component={Collapse} />
+    <Route path="/ui/configs" component={Collapse} />
     <Route path="/ui/grids" component={Grids} />
     <Route path="/ui/modals" component={Modals} />
     <Route path="/ui/notifications" component={Notifications} />

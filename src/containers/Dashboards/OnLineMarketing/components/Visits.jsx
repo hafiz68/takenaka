@@ -34,7 +34,7 @@ const Visits = () => {
     <Col md={12} xl={12} lg={12} xs={12}>
       {/* <Card>
               <CardBody className="dashboard__card-widget" color='primary'>  */}
-              <Link  className='btn-issue' to="/tables/data_table_issue">
+              <Link  className='btn-issue' to="/tables/users_issue">
         <Button outline  color='primary'>
         Pending tasks
         </Button>

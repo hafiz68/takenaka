@@ -23,7 +23,7 @@ const TopbarNavOtherPages = () => (
       </DropdownItem>
       <DropdownItem>
         <TopbarNavCategory title="Forms" icon="file-add">
-          <TopbarNavLink title="Basic Form" route="/forms/basic_form" />
+          <TopbarNavLink title="Basic Form" route="/forms/users" />
           <TopbarNavLink title="Check Form Controls" route="/forms/check_form_controls" />
           <TopbarNavLink title="File Upload" route="/forms/file_upload" />
           <TopbarNavLink title="Floating Labels Form" route="/forms/floating_labels_form" />
@@ -39,8 +39,8 @@ const TopbarNavOtherPages = () => (
       <DropdownItem>
         <TopbarNavCategory title="Tables" icon="list" isNew>
           <TopbarNavLink title="Basic tables" route="/tables/basic_tables" />
-          <TopbarNavLink title="Data table" newLink route="/tables/data_table" />
-          <TopbarNavLink title="Drag & Drop table" newLink route="/tables/dnd_table" />
+          <TopbarNavLink title="Data table" newLink route="/tables/users" />
+          <TopbarNavLink title="Drag & Drop table" newLink route="/tables/roles" />
           <TopbarNavLink title="Editable table" route="/tables/editable_table" />
           <TopbarNavLink title="Material table" route="/tables/material_table" />
           <TopbarNavLink title="Width Resizable table" newLink route="/tables/resizable_table" />
@@ -50,7 +50,7 @@ const TopbarNavOtherPages = () => (
         <TopbarNavCategory title="Charts" icon="chart-bars">
           <TopbarNavLink title="ChartsJS" route="/charts/charts_js" />
           <TopbarNavLink title="React-vis" route="/charts/react_vis" />
-          <TopbarNavLink title="Recharts" route="/charts/recharts" />
+          <TopbarNavLink title="Recharts" route="/charts/log_files" />
         </TopbarNavCategory>
       </DropdownItem>
       <DropdownItem>

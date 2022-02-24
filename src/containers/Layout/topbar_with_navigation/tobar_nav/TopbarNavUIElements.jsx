@@ -21,7 +21,7 @@ const TopbarNavUIElements = () => (
         <TopbarNavLink title="Carousel" route="/ui/carousel" />
       </DropdownItem>
       <DropdownItem>
-        <TopbarNavLink title="Collapse" route="/ui/collapse" />
+        <TopbarNavLink title="Collapse" route="/ui/configs" />
       </DropdownItem>
       <DropdownItem>
         <TopbarNavLink title="Grids" route="/ui/grids" />

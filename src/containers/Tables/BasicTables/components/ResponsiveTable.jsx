@@ -18,7 +18,7 @@ const ResponsiveTable = () => {
           <div className="card__title">
             {/* <h5 className="bold-text">{t('tables.basic_tables.responsive_table')}</h5>
             <h5 className="subhead">Use default table with property <span className="red-text">responsive</span></h5> */}
-            <Link to='/forms/simple_form'><Button type='warning' >Add new project</Button></Link>
+            <Link to='/forms/add_project'><Button type='warning' >Add new project</Button></Link>
                   </div>
           <Table responsive className="table--bordered">
             <thead>
@@ -39,8 +39,8 @@ const ResponsiveTable = () => {
                   {/* <td>{item.age}</td> */}
                   <td>{item.location}</td>
                   <td><Badge color={item.status_resp}>{item.badge_resp}</Badge></td>
-                  <td><Link to='/tables/basic_tables1'><button className='arch-data' ><FaFileArchive size={20}/></button></Link></td>
-                  <td><Link to='/tables/data_table_issue'><Button type='warning' >View</Button></Link></td>
+                  <td><Link to='/tables/archives'><button className='arch-data' ><FaFileArchive size={20}/></button></Link></td>
+                  <td><Link to='/tables/users_issue'><Button type='warning' >View</Button></Link></td>
                 </tr>
               ))}
             </tbody>
