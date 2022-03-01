@@ -44,76 +44,90 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 />
               </div>
             </div> */}
-            <div className="form__form-group">
-              {/* <span className="form__form-group-label">Disabled Field</span>
-              <div className="form__form-group-field">
-                <Field
-                  name="disableInput"
-                  component="input"
-                  type="text"
-                  placeholder="Disabled Input"
-                  disabled
-                />
-              </div> */}
-            </div>
             <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
-                <span className="form__form-group-label">Branch Name</span>
+                <span className="form__form-group-label">Issue title</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="Branch Name"
-                    component="input"
-                    type="text"
-                    placeholder="Branch Name"
+                    name="Issue title"
+                     component={renderSelectField}
+                    options={[
+                      { value: "one", label: "Walls" },
+                      { value: "two", label: "Ceiling" },
+                    ]}
                   />
                 </div>
               </div>
             </Col>
             <Col sm={12} md={6} lg={6}>
-              <div className="form__form-group">
+            <div className="form__form-group">
+                <span className="form__form-group-label">Branch</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Branch"
+                    component={renderSelectField}
+                    options={[
+                      { value: "DE Poland", label: "DE Poland" },
+                      { value: "DE Italy", label: "DE Italy" },
+                      { value: "DE Spain", label: "DE Spain" },
+                    ]}
+                  />
+                </div>
+              </div>
+            </Col>
+            <Col sm={12} md={6} lg={6}>
+            <div className="form__form-group">
                 <span className="form__form-group-label">Client</span>
                 <div className="form__form-group-field">
                   <Field
                     name="Client"
-                    component="input"
-                    type="text"
-                    placeholder="Client"
+                    component={renderSelectField}
+                    options={[
+                      { value: "Morrison", label: "Morrison" },
+                      { value: "Alexander", label: "Alexander" },
+                      { value: "Medinberg", label: "Medinberg" },
+                    ]}
                   />
                 </div>
               </div>
             </Col>
             <Col sm={12} md={6} lg={6}>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Project Name</span>
+            <div className="form__form-group">
+                <span className="form__form-group-label">Project</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="Project Name"
-                    component="input"
-                    type="text"
-                    placeholder="Project Name"
+                    name="Project"
+                    component={renderSelectField}
+                    options={[
+                      { value: "DE Matika Ratingen", label: "DE Matika Ratingen" },
+                      { value: "DE Fuji Oil", label: "DE Fuji Oil" },
+                      { value: "DE Mizuho Bank", label: "DE Mizuho Bank" },
+                    ]}
                   />
                 </div>
               </div>
             </Col>
             <Col sm={12} md={6} lg={6}>
-              <div className="form__form-group">
+            <div className="form__form-group">
                 <span className="form__form-group-label">Occurance</span>
                 <div className="form__form-group-field">
                   <Field
                     name="Occurance"
-                    component="input"
-                    type="text"
-                    placeholder="Occurance"
+                    component={renderSelectField}
+                    options={[
+                      { value: "Before HO", label: "Before HO" },
+                      { value: "After HO", label: "After HO" },
+                    ]}
                   />
                 </div>
               </div>
             </Col>
             <Col sm={12} md={6} lg={6}>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Due date</span>
+            <div className="form__form-group">
+                <span className="form__form-group-label">Occurance Date</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="default_date"
+                    name="Occurance"
                     component={renderDatePickerField}
                     type="text"
                     placeholder="yyyy/mm/dd"
@@ -126,40 +140,47 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
             </Col>
             <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
-                <span className="form__form-group-label">Description</span>
+                <span className="form__form-group-label">Due date</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="description"
-                    component="input"
-                    type="descrption"
-                    placeholder="descrption"
+                    name="Due date"
+                    component={renderDatePickerField}
+                    type="text"
+                    placeholder="yyyy/mm/dd"
+                  />
+                  <div className="form__form-group-icon">
+                    <CalendarBlankIcon />
+                  </div>
+                </div>
+              </div>
+            </Col>
+            <Col sm={12} md={6} lg={6}>
+            <div className="form__form-group">
+                <span className="form__form-group-label">Level</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Occurance"
+                    component={renderSelectField}
+                    options={[
+                      { value: "i", label: "i" },
+                      { value: "ii", label: "ii" },
+                      { value: "iii", label: "iii" },
+                    ]}
                   />
                 </div>
               </div>
             </Col>
+            
             <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
                 <span className="form__form-group-label">Disturbance</span>
                 <div className="form__form-group-field">
                   <Field
                     name="Disturbance"
-                    component="input"
-                    type="text"
-                    placeholder="Disturbance"
-                  />
-                </div>
-              </div>
-            </Col>
-            <Col sm={12} md={6} lg={6}>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Position</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="Position"
                     component={renderSelectField}
                     options={[
-                      { value: "one", label: "Walls" },
-                      { value: "two", label: "Ceiling" },
+                      { value: "Yes", label: "Yes" },
+                      { value: "No", label: "No" },
                     ]}
                   />
                 </div>
@@ -182,14 +203,14 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
             </Col>
             <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
-                <span className="form__form-group-label">Status</span>
+                <span className="form__form-group-label">Position</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="Status"
+                    name="Position"
                     component={renderSelectField}
                     options={[
-                      { value: "one", label: "Completed" },
-                      { value: "two", label: "Ongoing" },
+                      { value: "Walls", label: "Walls" },
+                      { value: "Ceiling", label: "Ceiling" },
                     ]}
                   />
                 </div>
@@ -197,28 +218,47 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
             </Col>
             <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
-                <span className="form__form-group-label">
-                  Resposible person
-                </span>
+                <span className="form__form-group-label">Status</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="Resposible person"
-                    component="input"
-                    type="text"
-                    placeholder="Resposible person"
+                    name="Status"
+                    component={renderSelectField}
+                    options={[
+                      { value: "Completed", label: "Completed" },
+                      { value: "Ongoing", label: "Ongoing" },
+                      { value: "Closed", label: "Closed" },
+                    ]}
                   />
                 </div>
               </div>
             </Col>
             <Col sm={12} md={6} lg={6}>
-              <div className="form__form-group">
+            <div className="form__form-group">
+                <span className="form__form-group-label">Resposibility</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Resposibility"
+                    component={renderSelectField}
+                    options={[
+                      { value: "TAKENAKA", label: "TAKENAKA" },
+                      { value: "Sub-con", label: "Sub-con" },
+                    ]}
+                  />
+                </div>
+              </div>
+            </Col>
+            <Col sm={12} md={6} lg={6}>
+            <div className="form__form-group">
                 <span className="form__form-group-label">Assign</span>
                 <div className="form__form-group-field">
                   <Field
                     name="Assign"
-                    component="input"
-                    type="text"
-                    placeholder="Assign"
+                    component={renderSelectField}
+                    options={[
+                      { value: "Morrison", label: "Morrison" },
+                      { value: "Alexander", label: "Alexander" },
+                      { value: "Medinberg", label: "Medinberg" },
+                    ]}
                   />
                 </div>
               </div>
@@ -229,25 +269,41 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 <div className="form__form-group-field">
                   <Field
                     name="Cc"
-                    component="input"
-                    type="text"
-                    placeholder="Cc"
+                    component={renderSelectField}
+                    options={[
+                      { value: "Morrison", label: "Morrison" },
+                      { value: "Alexander", label: "Alexander" },
+                      { value: "Medinberg", label: "Medinberg" },
+                    ]}
                   />
                 </div>
               </div>
             </Col>
             <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
-                <span className="form__form-group-label">Level</span>
+                <span className="form__form-group-label">WBS</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="Level"
+                    name="WBS"
                     component={renderSelectField}
                     options={[
-                      { value: "1", label: "1" },
-                      { value: "2", label: "2" },
-                      { value: "3", label: "3" },
+                      { value: "000 - Site Installation", label: "000 - Site Installation" },
+                      { value: "001 - Site Consumable", label: "001 - Site Consumable" },
+                      { value: "	002 - infrastructure connection cost and fee", label: "	002 - infrastructure connection cost and fee" },
                     ]}
+                  />
+                </div>
+              </div>
+            </Col>
+            <Col sm={12} md={12} lg={12}>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Description</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="description"
+                    component="input"
+                    type="descrption"
+                    placeholder="descrption"
                   />
                 </div>
               </div>
@@ -380,9 +436,6 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 </div>
               </button>
             </Col>
-            <div className="card__title">
-              <h5 className="bold-text">{t("Add Forms")}</h5>
-            </div>
             <Col sm={12} md={12} lg={12}>
               <div className="btn-clm">
                 <button className="butn__link" type="button">

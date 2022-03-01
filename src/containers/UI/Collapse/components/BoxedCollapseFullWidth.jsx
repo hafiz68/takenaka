@@ -1,16 +1,18 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-import { Button, Card, CardBody, Col, Table, Row } from 'reactstrap';
+import { Field, reduxForm } from 'redux-form';
+import { Button, Card, CardBody, Col, Table, Row, InputGroup, InputGroupAddon, Input } from 'reactstrap';
 import Collapse from '../../../../shared/components/Collapse';
 import { AiOutlinePlusCircle } from 'react-icons/ai'
+import {Link} from 'react-router-dom'
 
 const BoxedCollapseFullWidth = ({
-  onClick, changeToLight, changeToDark,
+  onClick, changeToLight, changeToDark
 }) => {
-  // const hideSidebar = () => {
-  //   onClick();
-  // };
+  const hideSidebar = () => {
+    onClick();
+  };
   const { t } = useTranslation('common');
 
   return (
@@ -21,7 +23,7 @@ const BoxedCollapseFullWidth = ({
             {/* <h5 className="bold-text">{t('Configurator')}</h5> */}
             {/* <h5 className="subhead">Use default collapse with class <span className="red-text">with-shadow</span></h5> */}
           </div>
-          <Collapse title="Themes" className="with-shadow">
+          {/* <Collapse title="Themes" className="with-shadow">
             <div className='btn-clm'>
               <button className="butn__link" type="button" onClick={changeToLight}>
                 <p className="butn__link-title">Light Theme</p>
@@ -29,7 +31,7 @@ const BoxedCollapseFullWidth = ({
               <button className="butn__link" type="button" onClick={changeToDark}>
                 <p className="butn__link-title">Dark Theme</p>
               </button></div>
-          </Collapse>
+          </Collapse> */}
           <Collapse title="User Mapping" className="with-shadow">
             <p><Collapse title="Users by Usernames" className="with-shadow">
               <p>
@@ -182,6 +184,70 @@ const BoxedCollapseFullWidth = ({
                   </tbody>
                 </Table>
                 </p>
+              </Col>
+            </Row>
+          </Collapse>
+          <Collapse title="WBS" className="with-shadow">
+            <Row>
+              <Col xs={12} md={12} lg={12}>
+
+                <p><Table responsive hover>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Item</th>
+                    </tr>
+                  </thead>
+                  <tbody className=' text-left' >
+
+                    <tr >
+                      <td>1</td>
+                      <td>000 - Site Installation</td>
+                    </tr>
+                    <tr >
+                      <td>2</td>
+                      <td>001 - Site Consumable</td>
+                    </tr>
+                    <tr >
+                      <td>3</td>
+                      <td>002 - infrastructure connection cost and fee</td>
+                    </tr>
+                    <tr >
+                      <td>4</td>
+                      <td>003 - Inspection and Survey</td>
+                    </tr>
+                    <tr >
+                      <td>5</td>
+                      <td>004 - Other Temporary Coast</td>
+                    </tr>
+                    <tr >
+                      <td></td>
+                      <td><AiOutlinePlusCircle size={25} /> Tab to enter more</td>
+                    </tr>
+
+                  </tbody>
+                </Table>
+                </p>
+              </Col>
+            </Row>
+          </Collapse>
+          <Collapse title="Session Expiry" className="with-shadow">
+            <Row>
+              <Col xs={12} md={12} lg={12}>
+                <div>
+                <InputGroup>
+                <Input type="select" name="select" id="exampleSelect">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </Input>
+        <InputGroupAddon addonType="append">
+          <Button color="primary">Submit</Button>
+        </InputGroupAddon>
+      </InputGroup>
+      </div>
               </Col>
             </Row>
           </Collapse>

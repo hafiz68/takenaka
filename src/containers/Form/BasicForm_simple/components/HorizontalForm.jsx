@@ -82,7 +82,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 />
               </div>
             </div></Col>
-            {/* <Col sm={12} md={6} lg={6}>
+                        {/* <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
                 <span className="form__form-group-label">Position</span>
                 <div className="form__form-group-field">
@@ -136,6 +136,18 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                   />
                 </div>
               </div></Col>
+              <Col sm={12} md={6} lg={6}>
+            <div className="form__form-group">
+              <span className="form__form-group-label">Project Code</span>
+              <div className="form__form-group-field">
+                <Field
+                  name="Project Code"
+                  component="input"
+                  type="text"
+                  placeholder="Project Code"
+                />
+              </div>
+            </div></Col>
               {/* <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
                 <span className="form__form-group-label">Status</span>

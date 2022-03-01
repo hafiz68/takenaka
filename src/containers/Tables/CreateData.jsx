@@ -6,19 +6,19 @@ import PropTypes from 'prop-types';
 const CreateTableData = () => {
   const columns = useMemo(
     () => [
+      // {
+      //   Header: '#',
+      //   accessor: 'id',
+      //   Footer: 'Middle age:',
+      //   disableGlobalFilter: true,
+      //   width: 65,
+      // },
       {
-        Header: '#',
-        accessor: 'id',
-        Footer: 'Middle age:',
-        disableGlobalFilter: true,
-        width: 65,
-      },
-      {
-        Header: 'First name',
+        Header: 'First Name',
         accessor: 'first',
       },
       {
-        Header: 'Last name',
+        Header: 'Last Name',
         accessor: 'last',
         disableGlobalFilter: true,
       },
@@ -65,7 +65,7 @@ const CreateTableData = () => {
 
   const data = [];
   const rows = () => {
-    for (let i = 1; i < 36; i += 1) {
+    for (let i = 1; i < 6; i += 1) {
       data.push({
         id: i,
         first: ['Maria', 'Bobby  ', 'Alexander'][Math.floor((Math.random() * 3))],
@@ -73,7 +73,7 @@ const CreateTableData = () => {
         user: ['@dragon', '@hamster', '@cat'][Math.floor((Math.random() * 3))],
         // age: Math.min(100, Math.round(Math.random() * 30) + 20),
         // date: getRandomDate(new Date(2002, 3, 1), new Date(1954, 3, 1)),
-        location: ['Tokio', 'Tokio', 'Moscow', 'Rome'][Math.floor((Math.random() * 4))],
+        location: ['Belgium', 'Czech Republic', 'Netherlands', 'Hungry'][Math.floor((Math.random() * 4))],
         role: ['Manager', 'Head Manager', 'Architect', 'Admin', 'Project Manager'][Math.floor((Math.random() * 5))],
       });
     }

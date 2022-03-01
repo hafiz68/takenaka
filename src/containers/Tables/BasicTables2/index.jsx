@@ -11,7 +11,7 @@ const BasicTables = () => {
   const { t } = useTranslation('common');
 
   return (
-    <Container>
+    <>
       <Row>
         <Col md={12}>
           <h3 className="page-title">{t('Log files')}</h3>
@@ -20,13 +20,9 @@ const BasicTables = () => {
         </Col>
       </Row>
       <Row>
-        {/* <BasicTable />
-        <BorderedTable />
-        <HeadAccentTable />
-        <ColoredStringTable /> */}
         <ResponsiveTable />
       </Row>
-    </Container>
+    </>
   );
 };
 

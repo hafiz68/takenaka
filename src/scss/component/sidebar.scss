@@ -133,7 +133,7 @@
     top: 0;
     height: 100%;
     width: 2px;
-    background: $color-accent;
+    // background: $color-accent;
     opacity: 0;
     transition: all 0.3s;
 
@@ -216,7 +216,7 @@
   }
 
   @include themify($themes) {
-    background-color: themed('colorHover');
+    background-color: #932239;
   }
 
   .sidebar__link {
@@ -468,6 +468,10 @@
   }
 }
 
+.theme-light .sidebar__submenu .sidebar__link:hover {
+  background-color: rgba(0,0,0,0.2);
+}
+
 @media (max-width: 575px) {
 
   .sidebar {
@@ -501,3 +505,5 @@
     display: block;
   }
 }
+
+

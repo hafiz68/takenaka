@@ -5,7 +5,8 @@ import {
   ButtonToolbar, UncontrolledDropdown, DropdownToggle,
    DropdownMenu, DropdownItem
 } from 'reactstrap';
-import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
+import ChevronDownIcon from 'mdi-react/ChevronDownIcon'
+import {FaFileDownload} from 'react-icons/fa';
 import {GoDesktopDownload} from 'react-icons/go';
 import { Field, reduxForm } from 'redux-form';
 import renderSelectField from '../../../../shared/components/form/Select';
@@ -133,12 +134,13 @@ const DataReactTable = ({ reactTableData }) => {
                 <th >Status</th>
                 <th >Change Status</th>
                 <th >Download QPIS</th>
+                <th >Export issue</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>1</td>
-                <td>Cracks</td>
+                <td>DE Matika Ratingen</td>
                 <td>Ceiling cracks</td>
                 <td><Badge color={"primary"}>3</Badge></td>
                 <td>18/3/2022</td>
@@ -147,7 +149,7 @@ const DataReactTable = ({ reactTableData }) => {
                   <ButtonToolbar>
                     <UncontrolledDropdown>
                       <DropdownToggle size="sm" className="icon icon--right" outline>
-                        <p>Change Status <ChevronDownIcon /></p>
+                        <p>Change  <ChevronDownIcon /></p>
                       </DropdownToggle>
                       <DropdownMenu size="sm" className="dropdown__menu">
                         <DropdownItem>Ongoin</DropdownItem>
@@ -171,9 +173,11 @@ const DataReactTable = ({ reactTableData }) => {
                   ]}
                 /> */}
                 </td>
+                <td></td>
+                <td><p><GoDesktopDownload className='issue-down' size={30}/></p></td>
               </tr><tr>
                 <td>2</td>
-                <td>Cracks</td>
+                <td>DE Matika Halle</td>
                 <td>Ceiling cracks</td>
                 <td><Badge color={"danger"}>1</Badge></td>
                 <td>18/3/2022</td>
@@ -182,7 +186,7 @@ const DataReactTable = ({ reactTableData }) => {
                   <ButtonToolbar>
                     <UncontrolledDropdown>
                       <DropdownToggle size="sm" className="icon icon--right" outline >
-                        <p>Change Status <ChevronDownIcon /></p>
+                        <p>Change  <ChevronDownIcon /></p>
                       </DropdownToggle>
                       <DropdownMenu size="sm" className="dropdown__menu">
                         <DropdownItem>Ongoin</DropdownItem>
@@ -192,11 +196,12 @@ const DataReactTable = ({ reactTableData }) => {
                     </UncontrolledDropdown>
                   </ButtonToolbar>
                 </td>
-                <td><Button><p><GoDesktopDownload size={30}/></p></Button></td>
+                <td><p><FaFileDownload className='qpis-down' size={30}/></p></td>
+                <td><p><GoDesktopDownload className='issue-down' size={30}/></p></td>
               </tr>
               <tr>
                 <td>3</td>
-                <td>Cracks</td>
+                <td>DE Mando Frankfurt</td>
                 <td>Ceiling cracks</td>
                 <td><Badge color={"success"}>2</Badge></td>
                 <td>18/3/2022</td>
@@ -205,7 +210,7 @@ const DataReactTable = ({ reactTableData }) => {
                   <ButtonToolbar>
                     <UncontrolledDropdown>
                       <DropdownToggle size="sm" className="icon icon--right" outline>
-                        <p>Change Status <ChevronDownIcon /></p>
+                        <p>Change <ChevronDownIcon /></p>
                       </DropdownToggle>
                       <DropdownMenu size="sm" className="dropdown__menu">
                         <DropdownItem>Ongoin</DropdownItem>
@@ -215,6 +220,8 @@ const DataReactTable = ({ reactTableData }) => {
                     </UncontrolledDropdown>
                   </ButtonToolbar>
                 </td>
+                <td><p></p></td>
+                <td><p><GoDesktopDownload className='issue-down' size={30}/></p></td>
               </tr>
             </tbody>
           </Table>

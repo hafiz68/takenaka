@@ -32,7 +32,7 @@ const ResponsiveTable = () => {
               {tableRowsData.map(item => (
                 <tr key={item.id}>
                   <td>{item.id}</td>
-                  <td>{item.Project}</td>
+                  <td>{item.Company}</td>
                   <td>{item.Project}</td>
                   {/* <td>{item.username}</td>
                   <td>{item.age}</td> */}

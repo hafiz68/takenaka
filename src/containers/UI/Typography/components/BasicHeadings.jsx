@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Card, CardBody, Col } from 'reactstrap';
+import { Button, Card, CardBody, Col } from 'reactstrap';
+import UpdateModals from '../../../Tables/DnDTable/components/updateModal';
 
 
 const BasicHeadings = ({headLg,headSub,contentOne,contentTwo,contentThree,contentFour}) => {
@@ -24,6 +25,7 @@ const BasicHeadings = ({headLg,headSub,contentOne,contentTwo,contentThree,conten
              {contentTwo} <br></br>
              {contentThree}<br></br>
              {contentFour}</h5>
+             <UpdateModals/>
             {/* <h5>H5 Type something </h5> */}
             {/* <h5>h5 Type something </h5> */}
           </div>

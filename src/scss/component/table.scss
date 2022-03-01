@@ -93,7 +93,7 @@
   }
 
   &.table--not-pagination {
-    height: 458px;
+    // height: 458px;
 
     tbody {
       top: 30px;
@@ -505,6 +505,7 @@
   background-color: white;
   // padding: 10px 20px;
   margin-right: 25px;
+  cursor: pointer;
   border-radius: 10px;
   color: #646777;
 }
@@ -516,4 +517,40 @@
   // padding: 10px 20px;
   margin-right: 25px;
 
+}
+.qpis-down{
+  border: white;
+  background-color: white;
+  // padding: 10px 20px;
+  margin-left: 25px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #646777;
+}
+
+.qpis-down:hover{
+  border: white;
+  color: #932239;
+  border-radius: 10px;
+  // padding: 10px 20px;
+}
+
+.issue-down{
+  border: white;
+  background-color: white;
+  // padding: 10px 20px;
+  margin-left: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #646777;
+}
+
+.issue-down:hover{
+  border: white;
+  color: #932239;
+  border-radius: 10px;
+  // padding: 10px 20px;
+}
+.import_btn{
+  margin-left: 10px;
 }

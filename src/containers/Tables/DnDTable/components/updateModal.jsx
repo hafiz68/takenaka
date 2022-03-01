@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import {
   ButtonToolbar, Card, CardBody, Col,
 } from 'reactstrap';
-import Modal from '../../../../shared/components/Modal';
+import Modal from '../../../../shared/components/updateModal';
 
 const DefaultModals = () => {
   const { t } = useTranslation('common');
@@ -25,12 +25,8 @@ const DefaultModals = () => {
                now sixteen nor improve."
             /> */}
             <Modal
-              input='text'
               color="success"
-              title="Well Done!"
-              btn="Success"
-              message="Expect warmly its tended garden him esteem had remove off. Effects dearest staying
-               now sixteen nor improve."
+              btn="Edit"
             />
             {/* <Modal
               color="warning"

@@ -21,9 +21,9 @@ const DataTable = () => {
             }}
           >
             <div>
-              <h3 className="page-title">{t("User Management")}</h3>
+              <h3 className="page-title">{t("Issue Management")}</h3>
               <h3 className="page-subhead subhead">
-                Add and check your users here
+                Add and check your Issues here
               </h3>
             </div>
             <div className="add-btn">

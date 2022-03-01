@@ -14,7 +14,7 @@ const SidebarContent = ({
     <div className="sidebar__content">
       <ul className="sidebar__block">
         <SidebarLink
-          title="Dash Board"
+          title="Dashboard"
           icon="home"
           route="/main_dashboard"
           onClick={hideSidebar}
@@ -53,14 +53,14 @@ const SidebarContent = ({
           route="/fitness_dashboard"
           onClick={hideSidebar}
         /> */}
-        {/* <SidebarCategory title="Layout" icon="layers" sidebarCollapse={sidebarCollapse}>
+        <SidebarCategory title="Themes" icon="Themes" sidebarCollapse={sidebarCollapse}>
           <button className="sidebar__link" type="button" onClick={changeToLight}>
             <p className="sidebar__link-title">Light Theme</p>
           </button>
           <button className="sidebar__link" type="button" onClick={changeToDark}>
             <p className="sidebar__link-title">Dark Theme</p>
           </button>
-        </SidebarCategory> */}
+        </SidebarCategory>
         {/* <SidebarLink
           title="Log In"
           route="/log_in"

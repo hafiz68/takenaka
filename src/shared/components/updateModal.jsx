@@ -47,10 +47,6 @@ const ModalComponent = ({
         className={`modal-dialog--${color} ${modalClass}`}
       >
         <Form>
-        <FormGroup>
-          <Label><h3>Enter New Role</h3></Label>
-          <Input type="text" name="Role"  placeholder="Role Title" />
-        </FormGroup>
         <FormGroup check>
           <Label check>
             <Input type="checkbox" />
@@ -99,7 +95,8 @@ const ModalComponent = ({
             Apply for the closing of Tasks
           </Label>
         </FormGroup>
-        <Button>Submit</Button>
+        <Button>Update</Button>
+        <Button>Delete</Button>
       </Form>
       </Modal>
     </div>

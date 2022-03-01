@@ -91,28 +91,36 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 </button>
               </div>
             </div>
-            <div className="form__form-group">
-              <span className="form__form-group-label">Role</span>
-              <div className="form__form-group-field">
-                <Field
-                  name="Role"
-                  component="input"
-                  type="text"
-                  placeholder="Role"
-                />
+              <div className="form__form-group">
+                <span className="form__form-group-label">Role</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Role"
+                    component={renderSelectField}
+                    options={[
+                      { value: "Software Administrator", label: "Software Administrator" },
+                      { value: "HQ Management", label: "HQ Management" },
+                      { value: "Branch Management", label: "Branch Management" },
+                      { value: "Users", label: "Users" },
+                    ]}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="form__form-group">
-              <span className="form__form-group-label">Branch</span>
-              <div className="form__form-group-field">
-                <Field
-                  name="Branch"
-                  component="input"
-                  type="text"
-                  placeholder="Branch"
-                />
+              <div className="form__form-group">
+                <span className="form__form-group-label">Branch</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Branch"
+                    component={renderSelectField}
+                    options={[
+                      { value: "Germany", label: "Germany" },
+                      { value: "Hungry", label: "Hungry" },
+                      { value: "Czech Republic", label: "Czech Republic" },
+                      { value: "Netherlands", label: "Netherlands" },
+                    ]}
+                  />
+                </div>
               </div>
-            </div>
             {/* <div className="form__form-group">
               <span className="form__form-group-label">Icon Left</span>
               <div className="form__form-group-field">
