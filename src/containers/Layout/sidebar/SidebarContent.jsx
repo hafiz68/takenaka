@@ -110,7 +110,7 @@ const SidebarContent = ({
             type="button"
             onClick={changeToGrayBlack}
           >
-            <p className="sidebar__link-title">Dark Gray Theme</p>
+            <p className="sidebar__link-title">Blue Theme</p>
           </button>
         </SidebarCategory>
         {/* <SidebarLink

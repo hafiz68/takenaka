@@ -127,7 +127,7 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 <Field
                   name="SCode"
                   component="input"
-                  type="text"
+                  type="number"
                   placeholder="Security Code"
                 />
               </div>

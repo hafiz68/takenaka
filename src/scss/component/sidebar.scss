@@ -505,5 +505,46 @@
     display: block;
   }
 }
+.theme-grayBlack .sidebar__block {
+  border-bottom: 1px solid #08080a;
+  background-color: #8ab8ca;
+}
 
+.theme-grayBlack .sidebar__content {
+  background-color: #8ab8ca;
+
+}
+
+.theme-grayBlack .sidebar__submenu {
+  background-color: #103646;
+}
+.theme-grayBlack .sidebar {
+  background: #8ab8ca;
+}
+.theme-grayBlack .sidebar__link-icon {
+  color: #08080a;
+}
+
+.theme-gray .sidebar__block {
+  border-bottom: 1px solid #08080a;
+  background-color: #4b4b4e;
+}
+
+.theme-gray .sidebar__content {
+  background-color: #4b4b4e;
+
+}
+
+.theme-gray .sidebar__submenu {
+  background-color: #4b4b4e;
+}
+
+.theme-gray .sidebar__content {
+  background-color: #4b4b4e;
+}
+
+
+.theme-gray .sidebar {
+  background: #4b4b4e;
+}
 

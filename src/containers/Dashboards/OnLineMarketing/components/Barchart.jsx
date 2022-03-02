@@ -18,7 +18,7 @@ const Barchart =() => {
   }
   return (<>
     <div className="App" id="panel" style={{ width: "100%" }}>
-      <h1>position Wise Issues Charts</h1>
+      <h1>Position Wise Issues Charts</h1>
       <center><div className='position-chart' style={{ width: "80%" }}>
         <Bar className="bar-chart"
           data={{

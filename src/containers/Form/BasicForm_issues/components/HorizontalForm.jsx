@@ -418,13 +418,13 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 </div>
               </button>
             </Col>
-            <Col sm={12} md={12} lg={12}>
+            <Col sm={12} md={6} lg={6}>
               <div className="btn-clm">
-                <button className="butn__link" type="button">
+                <Button  type="button">
                   <Link to="/forms/qpis_form">
                     <p className="butn__link-title">QPIS Form</p>
                   </Link>
-                </button>
+                </Button>
               </div>
             </Col>
           </form>

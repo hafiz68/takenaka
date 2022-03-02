@@ -16,7 +16,7 @@ const themeReducer = (state = initialState, action) => {
     case CHANGE_THEME_TO_LIGHT:
       return { className: 'theme-light' };
     case CHANGE_THEME_TO_GRAY:
-      return { className: 'theme-gray' };
+      return { className: 'theme-Pgray' };
     case CHANGE_THEME_TO_GRAY_BLACK:
       return { className: 'theme-grayBlack' };
     default:

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {
   Card, CardBody, Col,
 } from 'reactstrap';
-import ReactTableBase from '../../../../shared/components/table/ReactTableBase';
+import ReactTableBase from '../../../../shared/components/table/ReactTableBase1';
 import ReactTableCustomizer from '../../../../shared/components/table/components/ReactTableCustomizer';
 
 const reorder = (rows, startIndex, endIndex) => {
