@@ -46,15 +46,13 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
             </div> */}
             <Col sm={12} md={6} lg={6}>
               <div className="form__form-group">
-                <span className="form__form-group-label">Issue title</span>
+                <span className="form__form-group-label">Issue Title</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="Issue title"
-                     component={renderSelectField}
-                    options={[
-                      { value: "one", label: "Walls" },
-                      { value: "two", label: "Ceiling" },
-                    ]}
+                    name="Issue Title"
+                    component="input"
+                    type="descrption"
+                    placeholder="descrption"
                   />
                 </div>
               </div>
@@ -139,27 +137,11 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
               </div>
             </Col>
             <Col sm={12} md={6} lg={6}>
-              <div className="form__form-group">
-                <span className="form__form-group-label">Due date</span>
-                <div className="form__form-group-field">
-                  <Field
-                    name="Due date"
-                    component={renderDatePickerField}
-                    type="text"
-                    placeholder="yyyy/mm/dd"
-                  />
-                  <div className="form__form-group-icon">
-                    <CalendarBlankIcon />
-                  </div>
-                </div>
-              </div>
-            </Col>
-            <Col sm={12} md={6} lg={6}>
             <div className="form__form-group">
                 <span className="form__form-group-label">Level</span>
                 <div className="form__form-group-field">
                   <Field
-                    name="Occurance"
+                    name="Level"
                     component={renderSelectField}
                     options={[
                       { value: "i", label: "i" },

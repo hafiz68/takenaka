@@ -20,12 +20,10 @@ const CreateTableData = () => {
       {
         Header: 'Last Name',
         accessor: 'last',
-        disableGlobalFilter: true,
       },
       {
         Header: 'Username',
         accessor: 'user',
-        disableGlobalFilter: true,
       },
       // {
       //   Header: 'Age',
@@ -48,13 +46,11 @@ const CreateTableData = () => {
       {
         Header: 'Branch',
         accessor: 'location',
-        disableGlobalFilter: true,
       },
       {
         Header: 'Role',
         accessor: 'role',
-        disableGlobalFilter: true,
-        disableSortBy: true,
+       
       },
     ],
     [],

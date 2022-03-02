@@ -485,11 +485,15 @@
 
 .arch-data{
   border: white;
-  background-color: white;
+  // background-color: white;
   // padding: 10px 20px;
   margin-right: 25px;
   border-radius: 10px;
-  color: #646777;
+  // color: #646777;
+  @include themify($themes) {
+    color: themed('colorText');
+    background: themed('colorBackground');
+  }
 }
 .arch-data:hover{
   border: white;
@@ -501,31 +505,44 @@
   
 }
 .unarch-btn{
-  border: white;
-  background-color: white;
+  
+  // background-color: white;
   // padding: 10px 20px;
   margin-right: 25px;
   cursor: pointer;
   border-radius: 10px;
-  color: #646777;
+  // color: #646777;
+  @include themify($themes) {
+    color: themed('colorText');
+    background: themed('colorBackground');
+    border-color: themed('colorBackground');
+  }
 }
 
 .unarch-btn:hover{
-  border: white;
-  color: #932239;
+  
+  // color: #932239;
   border-radius: 10px;
   // padding: 10px 20px;
   margin-right: 25px;
-
+  @include themify($themes) {
+    background: themed('colorBackground');
+    border-color: themed('colorBackground');
+  }
+  color: #932239;
 }
 .qpis-down{
   border: white;
-  background-color: white;
+  // background-color: white;
   // padding: 10px 20px;
   margin-left: 25px;
   cursor: pointer;
   border-radius: 10px;
-  color: #646777;
+  // color: #646777;
+  @include themify($themes) {
+    color: themed('colorText');
+    background: themed('colorBackground');
+  }
 }
 
 .qpis-down:hover{
@@ -536,19 +553,24 @@
 }
 
 .issue-down{
-  border: white;
-  background-color: white;
+  @include themify($themes) {
+    color: themed('colorText');
+    background: themed('colorBackground');
+  }
   // padding: 10px 20px;
   margin-left: 25px;
   border-radius: 10px;
   cursor: pointer;
-  color: #646777;
+  
 }
 
 .issue-down:hover{
   border: white;
-  color: #932239;
   border-radius: 10px;
+  @include themify($themes) {
+    background: themed('colorBackground');
+  }
+  color: #932239;
   // padding: 10px 20px;
 }
 .import_btn{

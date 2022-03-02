@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import BasicTables from '../../../Tables/BasicTables/index';
 import BasicTables1 from '../../../Tables/BasicTables1/index';
 import DataTable from '../../../Tables/DataTable/index';
+import DataTableReport from '../../../Tables/DataTableReport/index';
 import DataTableIssue from '../../../Tables/DataTableIssue/index';
 import DragAndDropTable from '../../../Tables/DnDTable/index';
 import EditableTable from '../../../Tables/EditableTable/index';
@@ -14,6 +15,7 @@ export default () => (
     <Route path="/tables/projects" component={BasicTables} />
     <Route path="/tables/archives" component={BasicTables1} />
     <Route path="/tables/users" component={DataTable} />
+    <Route path="/tables/report" component={DataTableReport} />
     <Route path="/tables/users_issue" component={DataTableIssue} />
     <Route path="/tables/roles" component={DragAndDropTable} />
     <Route path="/tables/editable_table" component={EditableTable} />

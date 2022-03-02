@@ -99,8 +99,8 @@ const DataReactTable = ({ reactTableData }) => {
         <CardBody>
           <div className="react-table__wrapper">
             <div className="card__title">
-              {/* <h5 className="bold-text">data react-table</h5>
-              <h5 className="subhead">Use table with&nbsp;
+              {/* <h5 className="bold-text">data react-table</h5> */}
+              {/* <h5 className="subhead">
                 <span className="red-text">table customizer</span>
               </h5> */}
             </div>

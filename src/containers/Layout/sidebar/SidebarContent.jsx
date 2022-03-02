@@ -35,12 +35,12 @@ const SidebarContent = ({
           route="/tables/archives"
           onClick={hideSidebar}
         />
-        {/* <SidebarLink
-          title="Report Template"
+        <SidebarLink
+          title="Report"
           icon="apartment"
-          route="/default_pages/project_summary"
+          route="/tables/report"
           onClick={hideSidebar}
-        /> */}
+        />
         <SidebarLink
           title="Configurator"
           icon="rocket"

@@ -82,7 +82,7 @@ const DataReactTable = ({ reactTableData }) => {
     withPagination,
     withSearchEngine,
     manualPageSize: [10, 20, 30, 40],
-    placeholder: 'Type to find...',
+    placeholder: 'Type to search',
   };
 
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Card, CardBody, Col, Badge, Table, Button, Row } from "reactstrap";
+import { Card, CardBody, Col, Badge, Table, Button, Row, Input } from "reactstrap";
 import { Link } from "react-router-dom";
 import BasicTableData from "./BasicTableData";
 import { Field, reduxForm } from "redux-form";
@@ -12,7 +12,25 @@ const { tableHeaderResponsiveData, tableRowsData } = BasicTableData();
 
 const ResponsiveTable = () => {
   const { t } = useTranslation("common");
-
+  const myFunction = () => {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[2];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+  }
+  
   return (
     <Col md={12} lg={12}>
       <Card>
@@ -37,7 +55,10 @@ const ResponsiveTable = () => {
             </div>
             </form>
           </Row>
-          <Table responsive className="table--bordered">
+          <Col md={3} lg={3}>
+          <Input bsSize="sm" type="text" id="myInput" onKeyUp={myFunction} placeholder="Search by project" title="Type in a name"/>
+          </Col>
+          <Table responsive className="table--bordered" id="myTable">
             <thead>
               <tr>
                 {tableHeaderResponsiveData.map((item) => (
@@ -60,17 +81,18 @@ const ResponsiveTable = () => {
                     <Badge color={item.status_resp}>{item.badge_resp}</Badge>
                   </td>
                   <td>
+                    <Link to="/tables/users_issue">
+                      <Button size="sm"  type="warning">View</Button>
+                    </Link>
+                  </td>
+                  <td>
                     <Link to="/tables/archives">
                       <button className="arch-data">
                         <FaFileArchive size={20} />
                       </button>
                     </Link>
                   </td>
-                  <td>
-                    <Link to="/tables/users_issue">
-                      <Button type="warning">View</Button>
-                    </Link>
-                  </td>
+                  
                   <td>
                     <p>
                       <GoDesktopDownload className="issue-down" size={30} />

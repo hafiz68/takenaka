@@ -231,12 +231,12 @@ const BoxedCollapseFullWidth = ({
               </Col>
             </Row>
           </Collapse>
-          <Collapse title="Session Expiry" className="with-shadow">
+          <Collapse title="User Session Expiry" className="with-shadow">
             <Row>
               <Col xs={12} md={12} lg={12}>
                 <div>
                 <InputGroup>
-                <Input type="select" name="select" id="exampleSelect">
+                <Input  type="select" name="select" id="exampleSelect">
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -244,7 +244,7 @@ const BoxedCollapseFullWidth = ({
             <option>5</option>
           </Input>
         <InputGroupAddon addonType="append">
-          <Button color="primary">Submit</Button>
+          <Button  color="primary">Submit</Button>
         </InputGroupAddon>
       </InputGroup>
       </div>

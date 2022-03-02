@@ -47,17 +47,19 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
               </div>
             </div></Col>
             <Col sm={12} md={6} lg={6}>
-            <div className="form__form-group">
-              <span className="form__form-group-label">Project type</span>
-              <div className="form__form-group-field">
-                <Field
-                  name="Project type"
-                  component="input"
-                  type="text"
-                  placeholder="Project type"
-                />
-              </div>
-            </div></Col>
+              <div className="form__form-group">
+                <span className="form__form-group-label">Project type</span>
+                <div className="form__form-group-field">
+                  <Field
+                    name="Position"
+                    component={renderSelectField}
+                    options={[
+                      { value: 'Build', label: 'Build' },
+                      { value: 'Design and Build', label: 'Design and Build' },
+                    ]}
+                  />
+                </div>
+              </div></Col>
             <Col sm={12} md={6} lg={6}>
             <div className="form__form-group">
               <span className="form__form-group-label">Project manager</span>
