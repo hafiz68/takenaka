@@ -10,7 +10,7 @@ const BasicForm = () => {
 
   return (
     <Container>
-      <Row>
+      {/* <Row>
         <Col md={12}>
           <h3 className="page-title">{t('Add User')}</h3>
           <h3 className="page-subhead subhead">Add information to add User
@@ -19,7 +19,7 @@ const BasicForm = () => {
       </Row>
       <Row>
         <HorizontalForm onSubmit={showResults} />
-      </Row>
+      </Row> */}
       {/* <Row>
         <VerticalForm onSubmit={showResults} />
       </Row> */}

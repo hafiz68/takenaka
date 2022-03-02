@@ -113,6 +113,17 @@ const HorizontalForm = ({ handleSubmit, reset }) => {
                 />
               </div>
             </div>
+            <div className="form__form-group">
+              <span className="form__form-group-label">Security Code</span>
+              <div className="form__form-group-field">
+                <Field
+                  name="Security Code"
+                  component="input"
+                  type="text"
+                  placeholder="Security Code"
+                />
+              </div>
+            </div>
             {/* <div className="form__form-group">
               <span className="form__form-group-label">Icon Left</span>
               <div className="form__form-group-field">
