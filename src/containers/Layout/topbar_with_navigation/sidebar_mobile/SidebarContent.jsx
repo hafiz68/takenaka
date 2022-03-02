@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SidebarLink from './SidebarLink';
 import SidebarCategory from './SidebarCategory';
 
-const SidebarContent = ({ onClick, changeToLight, changeToDark }) => {
+const SidebarContent = ({ onClick, changeToLight, changeToDark, changeToGray, changeToGrayBlack }) => {
   const hideSidebar = () => {
     onClick();
   };
@@ -53,6 +53,12 @@ const SidebarContent = ({ onClick, changeToLight, changeToDark }) => {
           </button>
           <button className="sidebar__link" type="button" onClick={changeToDark}>
             <p className="sidebar__link-title">Dark Theme</p>
+          </button>
+          <button className="sidebar__link" type="button" onClick={changeToGray}>
+            <p className="sidebar__link-title">Gray Theme</p>
+          </button>
+          <button className="sidebar__link" type="button" onClick={changeToGrayBlack}>
+            <p className="sidebar__link-title">Dark Gray Theme</p>
           </button>
         </SidebarCategory>
         <SidebarLink
@@ -180,6 +186,8 @@ const SidebarContent = ({ onClick, changeToLight, changeToDark }) => {
 SidebarContent.propTypes = {
   changeToDark: PropTypes.func.isRequired,
   changeToLight: PropTypes.func.isRequired,
+  changeToGray: PropTypes.func.isRequired,
+  changeToGrayBlack: PropTypes.func.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
