@@ -1,18 +1,29 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import {
-  Card, CardBody, Col, Table, Badge, Button,
-  ButtonToolbar, UncontrolledDropdown, DropdownToggle,
-   DropdownMenu, DropdownItem
-} from 'reactstrap';
-import ChevronDownIcon from 'mdi-react/ChevronDownIcon'
-import {FaFileDownload} from 'react-icons/fa';
-import {GoDesktopDownload} from 'react-icons/go';
-import { Field, reduxForm } from 'redux-form';
-import renderSelectField from '../../../../shared/components/form/Select';
-import { Link } from 'react-router-dom';
-import ReactTableBase from '../../../../shared/components/table/ReactTableBase';
-import ReactTableCustomizer from '../../../../shared/components/table/components/ReactTableCustomizer';
+  Card,
+  CardBody,
+  Col,
+  Table,
+  Badge,
+  Button,
+  ButtonToolbar,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Input,
+  Label,
+  Row,
+} from "reactstrap";
+import ChevronDownIcon from "mdi-react/ChevronDownIcon";
+import { FaFileDownload } from "react-icons/fa";
+import { GoDesktopDownload } from "react-icons/go";
+import { Field, reduxForm } from "redux-form";
+import renderSelectField from "../../../../shared/components/form/Select";
+import { Link } from "react-router-dom";
+import ReactTableBase from "../../../../shared/components/table/ReactTableBase";
+import ReactTableCustomizer from "../../../../shared/components/table/components/ReactTableCustomizer";
 
 const reorder = (rows, startIndex, endIndex) => {
   const result = Array.from(rows);
@@ -62,24 +73,22 @@ const DataReactTable = ({ reactTableData }) => {
   };
 
   const updateDraggableData = (result) => {
-    const items = reorder(
-      rows,
-      result.source.index,
-      result.destination.index,
-    );
+    const items = reorder(rows, result.source.index, result.destination.index);
     setData(items);
   };
 
   const updateEditableData = (rowIndex, columnId, value) => {
-    setData(old => old.map((item, index) => {
-      if (index === rowIndex) {
-        return {
-          ...old[rowIndex],
-          [columnId]: value,
-        };
-      }
-      return item;
-    }));
+    setData((old) =>
+      old.map((item, index) => {
+        if (index === rowIndex) {
+          return {
+            ...old[rowIndex],
+            [columnId]: value,
+          };
+        }
+        return item;
+      })
+    );
   };
 
   const tableConfig = {
@@ -90,9 +99,45 @@ const DataReactTable = ({ reactTableData }) => {
     withPagination,
     withSearchEngine,
     manualPageSize: [10, 20, 30, 40],
-    placeholder: 'Search by First name...',
+    placeholder: "Search by First name...",
+  };
+  const myFunction = () => {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[3];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
   };
 
+  const myFunction1 = () => {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput1");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[5];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  };
   return (
     <Col md={12} lg={12}>
       <Card>
@@ -123,18 +168,52 @@ const DataReactTable = ({ reactTableData }) => {
               fullCustomizer
             /> */}
           </div>
-          <Table responsive className="table--bordered">
+            <Row>
+          <Col md={3} lg={3}>
+            <Label for="exampleSelectMulti">Search by level</Label>
+            <Input
+              bsSize="sm"
+              type="select"
+              id="myInput"
+              onChange={myFunction}
+              placeholder="Search by Level"
+              title="Type in a name"
+            >
+              <option></option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </Input>
+          </Col>
+          <Col md={3} lg={3}>
+            <Label for="exampleSelectMulti">Search by Status</Label>
+            <Input
+              bsSize="sm"
+              type="select"
+              id="myInput1"
+              onChange={myFunction1}
+              placeholder="Search by Level"
+              title="Type in a name"
+            >
+              <option></option>
+              <option>Ongoing</option>
+              <option>approved</option>
+              <option>completed</option>
+            </Input>
+          </Col>
+          </Row>
+          <Table responsive className="table--bordered" id="myTable">
             <thead>
               <tr>
-                <th >Issue #</th>
-                <th >Project Name</th>
-                <th >Issue Title</th>
-                <th >Level</th>
-                <th >Date Created</th>
-                <th >Status</th>
-                <th >Change Status</th>
-                <th >Download QPIS</th>
-                <th >Export issue</th>
+                <th>Issue #</th>
+                <th>Project Name</th>
+                <th>Issue Title</th>
+                <th>Level</th>
+                <th>Date Created</th>
+                <th>Status</th>
+                <th>Change Status</th>
+                <th>Download QPIS</th>
+                <th>Export issue</th>
               </tr>
             </thead>
             <tbody>
@@ -142,14 +221,20 @@ const DataReactTable = ({ reactTableData }) => {
                 <td>1</td>
                 <td>DE Matika Ratingen</td>
                 <td>Ceiling cracks</td>
-                <td><Badge color={"primary"}>3</Badge></td>
+                <td>
+                  <Badge color={"primary"}>3</Badge>
+                </td>
                 <td>18/3/2022</td>
-                <td><Badge color={"primary"}>Ongoing</Badge></td>
+                <td>
+                  <Badge color={"primary"}>Ongoing</Badge>
+                </td>
                 <td>
                   <ButtonToolbar>
                     <UncontrolledDropdown>
-                      <DropdownToggle size="sm" className="icon icon--right" outline>
-                        <p>Change  <ChevronDownIcon /></p>
+                      <DropdownToggle size="sm" className="icon ">
+                        <p>
+                          Change <ChevronDownIcon />
+                        </p>
                       </DropdownToggle>
                       <DropdownMenu size="sm" className="dropdown__menu">
                         <DropdownItem>Ongoin</DropdownItem>
@@ -160,7 +245,7 @@ const DataReactTable = ({ reactTableData }) => {
                       </DropdownMenu>
                     </UncontrolledDropdown>
                   </ButtonToolbar>
-                  
+
                   {/* <Field
                   name="3"
                   component={renderSelectField}
@@ -174,19 +259,30 @@ const DataReactTable = ({ reactTableData }) => {
                 /> */}
                 </td>
                 <td></td>
-                <td><p><GoDesktopDownload className='issue-down' size={30}/></p></td>
-              </tr><tr>
+                <td>
+                  <p>
+                    <GoDesktopDownload className="issue-down" size={30} />
+                  </p>
+                </td>
+              </tr>
+              <tr>
                 <td>2</td>
                 <td>DE Matika Halle</td>
                 <td>Ceiling cracks</td>
-                <td><Badge color={"danger"}>1</Badge></td>
+                <td>
+                  <Badge color={"danger"}>1</Badge>
+                </td>
                 <td>18/3/2022</td>
-                <td><Badge color={"success"}>approved</Badge></td>
+                <td>
+                  <Badge color={"success"}>approved</Badge>
+                </td>
                 <td>
                   <ButtonToolbar>
                     <UncontrolledDropdown>
-                      <DropdownToggle size="sm" className="icon icon--right" outline >
-                        <p>Change  <ChevronDownIcon /></p>
+                      <DropdownToggle size="sm" className="icon">
+                        <p>
+                          Change <ChevronDownIcon />
+                        </p>
                       </DropdownToggle>
                       <DropdownMenu size="sm" className="dropdown__menu">
                         <DropdownItem>Ongoin</DropdownItem>
@@ -196,21 +292,35 @@ const DataReactTable = ({ reactTableData }) => {
                     </UncontrolledDropdown>
                   </ButtonToolbar>
                 </td>
-                <td><p><FaFileDownload className='qpis-down' size={30}/></p></td>
-                <td><p><GoDesktopDownload className='issue-down' size={30}/></p></td>
+                <td>
+                  <p>
+                    <FaFileDownload className="qpis-down" size={30} />
+                  </p>
+                </td>
+                <td>
+                  <p>
+                    <GoDesktopDownload className="issue-down" size={30} />
+                  </p>
+                </td>
               </tr>
               <tr>
                 <td>3</td>
                 <td>DE Mando Frankfurt</td>
                 <td>Ceiling cracks</td>
-                <td><Badge color={"success"}>2</Badge></td>
+                <td>
+                  <Badge color={"success"}>2</Badge>
+                </td>
                 <td>18/3/2022</td>
-                <td><Badge color={"danger"}>completed</Badge></td>
+                <td>
+                  <Badge color={"danger"}>completed</Badge>
+                </td>
                 <td>
                   <ButtonToolbar>
                     <UncontrolledDropdown>
-                      <DropdownToggle size="sm" className="icon icon--right" outline>
-                        <p>Change <ChevronDownIcon /></p>
+                      <DropdownToggle size="sm" className="icon">
+                        <p>
+                          Change <ChevronDownIcon />
+                        </p>
                       </DropdownToggle>
                       <DropdownMenu size="sm" className="dropdown__menu">
                         <DropdownItem>Ongoin</DropdownItem>
@@ -220,8 +330,14 @@ const DataReactTable = ({ reactTableData }) => {
                     </UncontrolledDropdown>
                   </ButtonToolbar>
                 </td>
-                <td><p></p></td>
-                <td><p><GoDesktopDownload className='issue-down' size={30}/></p></td>
+                <td>
+                  <p></p>
+                </td>
+                <td>
+                  <p>
+                    <GoDesktopDownload className="issue-down" size={30} />
+                  </p>
+                </td>
               </tr>
             </tbody>
           </Table>
@@ -233,10 +349,12 @@ const DataReactTable = ({ reactTableData }) => {
 
 DataReactTable.propTypes = {
   reactTableData: PropTypes.shape({
-    tableHeaderData: PropTypes.arrayOf(PropTypes.shape({
-      key: PropTypes.string,
-      name: PropTypes.string,
-    })),
+    tableHeaderData: PropTypes.arrayOf(
+      PropTypes.shape({
+        key: PropTypes.string,
+        name: PropTypes.string,
+      })
+    ),
     tableRowsData: PropTypes.arrayOf(PropTypes.shape()),
     defaultTableHeaderData: PropTypes.arrayOf(PropTypes.shape()),
     defaultTableRowData: PropTypes.arrayOf(PropTypes.shape()),
@@ -244,6 +362,6 @@ DataReactTable.propTypes = {
 };
 
 export default reduxForm({
-  form: 'DataReactTable', // a unique identifier for this form
+  form: "DataReactTable", // a unique identifier for this form
 })(DataReactTable);
 // DataReactTable;
