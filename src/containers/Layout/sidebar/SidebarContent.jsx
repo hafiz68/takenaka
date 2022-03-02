@@ -1,10 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import SidebarLink from './SidebarLink';
-import SidebarCategory from './SidebarCategory';
+import React from "react";
+import PropTypes from "prop-types";
+import SidebarLink from "./SidebarLink";
+import SidebarCategory from "./SidebarCategory";
 
 const SidebarContent = ({
-  onClick, changeToLight, changeToDark, sidebarCollapse,
+  onClick,
+  changeToLight,
+  changeToDark,
+  changeToGray,
+  changeToGrayBlack,
+  sidebarCollapse,
 }) => {
   const hideSidebar = () => {
     onClick();
@@ -19,16 +24,37 @@ const SidebarContent = ({
           route="/main_dashboard"
           onClick={hideSidebar}
         />
-          <SidebarLink title="User Management" route="/tables/users"   icon="user" onClick={hideSidebar} />
+        <SidebarLink
+          title="User Management"
+          route="/tables/users"
+          icon="user"
+          onClick={hideSidebar}
+        />
         <SidebarLink
           title="Role Management"
           icon="store"
           route="/tables/roles"
           onClick={hideSidebar}
           icon="apartment"
-          /> <SidebarLink title="Project Management"  icon="apartment" route="/tables/projects" onClick={hideSidebar} />
-          <SidebarLink title="Issues"  icon="apartment" route="/tables/users_issue" onClick={hideSidebar} />
-        <SidebarLink title="Log files"  icon="heart-pulse" route="/charts/log_files" onClick={hideSidebar} />
+        />{" "}
+        <SidebarLink
+          title="Project Management"
+          icon="apartment"
+          route="/tables/projects"
+          onClick={hideSidebar}
+        />
+        <SidebarLink
+          title="Issues"
+          icon="apartment"
+          route="/tables/users_issue"
+          onClick={hideSidebar}
+        />
+        <SidebarLink
+          title="Log files"
+          icon="heart-pulse"
+          route="/charts/log_files"
+          onClick={hideSidebar}
+        />
         <SidebarLink
           title="Archive data"
           icon="smartphone"
@@ -53,12 +79,38 @@ const SidebarContent = ({
           route="/fitness_dashboard"
           onClick={hideSidebar}
         /> */}
-        <SidebarCategory title="Themes" icon="Themes" sidebarCollapse={sidebarCollapse}>
-          <button className="sidebar__link" type="button" onClick={changeToLight}>
+        <SidebarCategory
+          title="Themes"
+          icon="Themes"
+          sidebarCollapse={sidebarCollapse}
+        >
+          <button
+            className="sidebar__link"
+            type="button"
+            onClick={changeToLight}
+          >
             <p className="sidebar__link-title">Light Theme</p>
           </button>
-          <button className="sidebar__link" type="button" onClick={changeToDark}>
+          <button
+            className="sidebar__link"
+            type="button"
+            onClick={changeToDark}
+          >
             <p className="sidebar__link-title">Dark Theme</p>
+          </button>
+          <button
+            className="sidebar__link"
+            type="button"
+            onClick={changeToGray}
+          >
+            <p className="sidebar__link-title">Gray Theme</p>
+          </button>
+          <button
+            className="sidebar__link"
+            type="button"
+            onClick={changeToGrayBlack}
+          >
+            <p className="sidebar__link-title">Dark Gray Theme</p>
           </button>
         </SidebarCategory>
         {/* <SidebarLink
@@ -169,9 +221,9 @@ const SidebarContent = ({
           </SidebarCategory>
         </SidebarCategory>
       </ul> */}
-       <ul className="sidebar__block">
-         <SidebarLink title="Log Out" icon="exit" route="/log_in" />
-       </ul>
+      <ul className="sidebar__block">
+        <SidebarLink title="Log Out" icon="exit" route="/log_in" />
+      </ul>
       {/* <ul className="sidebar__block">
         <SidebarLink
           title="Documentation"
@@ -187,6 +239,8 @@ const SidebarContent = ({
 SidebarContent.propTypes = {
   changeToDark: PropTypes.func.isRequired,
   changeToLight: PropTypes.func.isRequired,
+  changeToGray: PropTypes.func.isRequired,
+  changeToGrayBlack: PropTypes.func.isRequired,
   onClick: PropTypes.func.isRequired,
   sidebarCollapse: PropTypes.bool,
 };

@@ -6,7 +6,7 @@ import SidebarContent from './SidebarContent';
 import { SidebarProps } from '../../../../shared/prop-types/ReducerProps';
 
 const Sidebar = ({
-  changeToDark, changeToLight, changeMobileSidebarVisibility, sidebar,
+  changeToDark, changeToLight, changeToGray, changeToGrayBlack, changeMobileSidebarVisibility, sidebar,
 }) => {
   const sidebarClass = classNames({
     'sidebar sidebar--no-desktop': true,
@@ -22,6 +22,8 @@ const Sidebar = ({
             onClick={changeMobileSidebarVisibility}
             changeToDark={changeToDark}
             changeToLight={changeToLight}
+            changeToGray={changeToGray}
+            changeToGrayBlack={changeToGrayBlack}
           />
         </div>
       </Scrollbar>
@@ -33,6 +35,8 @@ Sidebar.propTypes = {
   sidebar: SidebarProps.isRequired,
   changeToDark: PropTypes.func.isRequired,
   changeToLight: PropTypes.func.isRequired,
+  changeToGray: PropTypes.func.isRequired,
+  changeToGrayBlack: PropTypes.func.isRequired,
   changeMobileSidebarVisibility: PropTypes.func.isRequired,
 };
 
