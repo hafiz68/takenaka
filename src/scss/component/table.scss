@@ -171,6 +171,7 @@
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    justify-content: center;
 
     &:first-child{
       margin-right: 10px;
@@ -210,6 +211,7 @@
     th,
     td {
       min-width: 100px !important;
+      text-align: center;
 
       &:first-child {
         max-width: 45px;
@@ -576,4 +578,7 @@
 }
 .import_btn{
   margin-left: 10px;
+}
+#table_report {
+
 }

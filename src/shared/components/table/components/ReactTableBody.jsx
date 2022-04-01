@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ReactTableDnDBody from './ReactTableDnDBody';
 import { ThemeProps } from '../../../prop-types/ReducerProps';
+import { GoDesktopDownload } from "react-icons/go";
 
 const ReactTableDefaultBody = ({ page, getTableBodyProps, prepareRow }) => (
   <tbody className="table table--bordered" {...getTableBodyProps()}>
@@ -13,6 +14,7 @@ const ReactTableDefaultBody = ({ page, getTableBodyProps, prepareRow }) => (
           {row.cells.map(cell => (
             <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
           ))}
+          <td ><GoDesktopDownload className="issue-down" size={30} /></td>
         </tr>
       );
     })}

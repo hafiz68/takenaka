@@ -38,7 +38,7 @@ const AccountForm = ({ handleSubmit }) => {
         </div>
       </div>
       <NavLink className="btn btn-primary account__btn" to="/main_dashboard">Unlock</NavLink>
-      <NavLink className="btn btn-outline-danger account__btn" to="/main_dashboard">Logout</NavLink>
+      <NavLink className="btn btn-outline-danger account__btn" to="/log_in">Logout</NavLink>
     </form>
   );
 };

@@ -75,7 +75,7 @@ const ReactTableHeader = ({ headerGroups, isResizable, isSortable }) => {
   };
 
   return (
-    <thead className="thead th">
+    <thead className="thead th" id='table_report'>
       {headerGroups.map(headerGroup => (
         <tr {...headerGroup.getHeaderGroupProps()} className="react-table thead tr">
           {headerGroup.headers.map(column => (
@@ -93,6 +93,7 @@ const ReactTableHeader = ({ headerGroups, isResizable, isSortable }) => {
               )}
             </th>
           ))}
+          <th>Download</th>
         </tr>
       ))}
     </thead>

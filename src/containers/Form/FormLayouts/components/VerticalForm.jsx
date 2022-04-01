@@ -35,6 +35,7 @@ const VerticalForm = ({ handleSubmit, reset }) => {
                   placeholder="Name"
                 />
               </div>
+              
             </div>
             <div className="form__form-group">
               <span className="form__form-group-label">E-mail</span>

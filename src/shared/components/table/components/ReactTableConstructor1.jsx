@@ -93,81 +93,110 @@ const ReactTableConstructor = ({
             <tr>
               <th></th>
               <th>
-                <Input bsSize="sm" type="select" title="Type in a name">
+              <label for="branch">filter by branch</label>
+                <select name="branch" bsSize="sm" type="select" >
                   <option></option>
                   <option>Belgium</option>
                   <option>France</option>
                   <option>Germany</option>
-                </Input>
+                </select>
               </th>
               <th>
-                <Input bsSize="sm" type="select" title="Type in a name">
+              <label for="client">filter by client</label>
+                <select name="client" type="select" >
                   <option></option>
                   <option>Morrison</option>
                   <option>Medinberg</option>
                   <option>Brown</option>
-                </Input>
+                </select>
               </th>
               <th>
-                <Input bsSize="sm" type="select" title="Type in a name">
+              <label for="project">filter by project</label>
+                <select name="project" type="select" >
                   <option></option>
                   <option>DE Fuji Oil</option>
                   <option>DE Matika Ratingen</option>
                   <option>DE Mizuho Bank</option>
-                </Input>
+                </select>
               </th>
               <th>
-                <Input bsSize="sm" type="select" title="Type in a name">
+              <label for="project">filter by Issue Id</label>
+                <select name="project" type="select" >
+                  <option></option>
+                  <option>DE Fuji Oil</option>
+                  <option>DE Matika Ratingen</option>
+                  <option>DE Mizuho Bank</option>
+                </select>
+              </th>
+              <th>
+              <label for="project">filter by Issue Name</label>
+                <select name="project" type="select" >
+                  <option></option>
+                  <option>DE Fuji Oil</option>
+                  <option>DE Matika Ratingen</option>
+                  <option>DE Mizuho Bank</option>
+                </select>
+              </th>
+              <th>
+              <label for="occurance">filter by occurance</label>
+                <select name="occurance" type="select" >
                   <option></option>
                   <option>After Ho</option>
                   <option>Before Ho</option>
-                </Input>
+                </select>
               </th>
+              
               <th>
-                <Input bsSize="sm" type="select" title="Type in a name">
+              <label for="position">filter by position</label>
+                <select name="position" type="select">
                   <option></option>
                   <option>Ceileing</option>
                   <option>Exterior</option>
                   <option>Wall</option>
-                </Input>
+                </select>
               </th>
               <th>
-                <Input bsSize="sm" type="select" title="Type in a name">
+              <label for="phenomenon">filter by phenomenon</label>
+                <select name="phenomenon" type="select">
                   <option></option>
                   <option>Cracks</option>
                   <option>Fall</option>
                   <option>Malfunction</option>
-                </Input>
+                </select>
               </th>
               <th>
-                <Input bsSize="sm" type="select" title="Type in a name">
+              <label for="disrurbance">filter by disrurbance</label>
+                <select name="disrurbance" type="select" >
                   <option></option>
                   <option>Yes</option>
                   <option>No</option>
-                </Input>
+                </select>
               </th>
               <th>
-                <Input bsSize="sm" type="select" title="Type in a name">
+              <label for="responsible">filter by responsible</label>
+                <select name="responsible" type="select">
                   <option></option>
                   <option>TAKENAKA</option>
                   <option>SUB-CON</option>
-                </Input>
+                </select>
               </th>
               <th>
-                <Input bsSize="sm" type="select" title="Type in a name">
+              <label for="status">filter by status</label>
+                <select name="status" type="select" >
                   <option></option>
                   <option>Completed</option>
                   <option>Ongoing</option>
                   <option>Closed</option>
-                </Input>
+                </select>
               </th>
               <th>
-                <Input bsSize="sm" type="select" title="Type in a name">
+              <label for="level">filter by level</label>
+                <select name="level" type="select" id="level">
                   <option></option>
                   <option>i</option>
                   <option>ii</option>
                   <option>iii</option>
-                </Input>
+                </select>
               </th>
             </tr>
           </thead>

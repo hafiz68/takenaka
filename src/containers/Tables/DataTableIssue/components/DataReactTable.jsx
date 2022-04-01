@@ -111,8 +111,9 @@ const DataReactTable = ({ reactTableData }) => {
       td = tr[i].getElementsByTagName("td")[3];
       if (td) {
         txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        if (txtValue.toUpperCase().indexOf(filter) > -1 ) {
           tr[i].style.display = "";
+          document.getElementById("myInput1").value = "";
         } else {
           tr[i].style.display = "none";
         }
@@ -130,8 +131,9 @@ const DataReactTable = ({ reactTableData }) => {
       td = tr[i].getElementsByTagName("td")[5];
       if (td) {
         txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        if (txtValue.toUpperCase().indexOf(filter) > -1 ) {
           tr[i].style.display = "";
+          document.getElementById("myInput").value = "";
         } else {
           tr[i].style.display = "none";
         }
@@ -169,8 +171,8 @@ const DataReactTable = ({ reactTableData }) => {
             /> */}
           </div>
             <Row>
-          <Col md={3} lg={3}>
-            <Label for="exampleSelectMulti">Search by level</Label>
+            <Col md={3} lg={3}>
+            <Label for="myInput">Search by level</Label>
             <Input
               bsSize="sm"
               type="select"
@@ -184,9 +186,9 @@ const DataReactTable = ({ reactTableData }) => {
               <option>2</option>
               <option>3</option>
             </Input>
-          </Col>
-          <Col md={3} lg={3}>
-            <Label for="exampleSelectMulti">Search by Status</Label>
+            </Col>
+            <Col md={3} lg={3}>
+            <Label for="myInput1">Search by Status</Label>
             <Input
               bsSize="sm"
               type="select"
@@ -200,12 +202,13 @@ const DataReactTable = ({ reactTableData }) => {
               <option>approved</option>
               <option>completed</option>
             </Input>
-          </Col>
-          </Row>
+            </Col>
+        </Row>
           <Table responsive className="table--bordered" id="myTable">
             <thead>
               <tr>
                 <th>Issue #</th>
+                <th>Issue Id</th>
                 <th>Project Name</th>
                 <th>Issue Title</th>
                 <th>Level</th>
@@ -219,6 +222,7 @@ const DataReactTable = ({ reactTableData }) => {
             <tbody>
               <tr>
                 <td>1</td>
+                <td>009</td>
                 <td>DE Matika Ratingen</td>
                 <td>Ceiling cracks</td>
                 <td>
@@ -267,6 +271,7 @@ const DataReactTable = ({ reactTableData }) => {
               </tr>
               <tr>
                 <td>2</td>
+                <td>045</td>
                 <td>DE Matika Halle</td>
                 <td>Ceiling cracks</td>
                 <td>
@@ -305,6 +310,7 @@ const DataReactTable = ({ reactTableData }) => {
               </tr>
               <tr>
                 <td>3</td>
+                <td>031</td>
                 <td>DE Mando Frankfurt</td>
                 <td>Ceiling cracks</td>
                 <td>
